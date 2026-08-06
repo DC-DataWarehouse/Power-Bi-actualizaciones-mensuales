@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power BI Updates 2026 | Novedades y Actualizaciones Mensuales</title>
+  <meta name="description" content="Explora todas las novedades y actualizaciones de Power BI durante el año 2026. Buscador, filtros por categoría e integración de videos oficiales.">
+  
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          colors: {
+            pbi: {
+              yellow: '#F2C811',
+              darkyellow: '#ECC100',
+              gray: '#252423',
+              dark: '#09090b',
+              lightbg: '#f3f4f6'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Outfit', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Google Fonts & FontAwesome -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="transition-colors duration-300">
+
+  <!-- Header Nav -->
+  <header class="sticky top-0 z-40 w-full glassmorphism transition-all duration-300">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+      <div class="flex items-center space-x-3">
+        <div class="w-10 h-10 bg-pbi-yellow rounded-lg flex items-center justify-center glow-primary transition-transform hover:scale-105">
+          <i class="fa-solid fa-chart-bar text-pbi-gray text-xl"></i>
+        </div>
+        <div>
+          <span class="font-display font-bold text-lg tracking-tight block">Power BI</span>
+          <span class="text-xs font-semibold text-pbi-yellow tracking-widest uppercase block -mt-1">Portal de Novedades 2026</span>
+        </div>
+      </div>
+
+      <!-- Theme Switcher and Social -->
+      <div class="flex items-center space-x-4">
+        <!-- Enlaces Sociales de David Cerón -->
+        <div class="hidden sm:flex items-center space-x-3.5 mr-1 text-gray-500 dark:text-gray-400">
+          <a href="https://www.linkedin.com/in/davidceron-datanalyst" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow text-lg transition-colors" title="Perfil de LinkedIn de David Cerón">
+            <i class="fa-brands fa-linkedin"></i>
+          </a>
+          <a href="https://github.com/DC-DataWarehouse" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow text-lg transition-colors" title="GitHub de David Cerón">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="mailto:david.esteban.ceron@hotmail.com" class="hover:text-pbi-yellow text-lg transition-colors" title="Contacto por Correo Electrónico">
+            <i class="fa-solid fa-envelope"></i>
+          </a>
+        </div>
+        <button id="theme-toggle" class="p-2.5 rounded-lg border border-gray-200 dark:border-zinc-800 text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-zinc-800 focus:outline-none transition-all duration-300" aria-label="Cambiar tema">
+          <i id="theme-toggle-dark-icon" class="hidden fa-solid fa-moon text-lg text-yellow-400"></i>
+          <i id="theme-toggle-light-icon" class="hidden fa-solid fa-sun text-lg text-amber-500"></i>
+        </button>
+        <a href="https://powerbi.microsoft.com/" target="_blank" rel="noopener noreferrer" class="hidden sm:inline-flex items-center space-x-1.5 px-3.5 py-2 rounded-lg bg-gray-100 dark:bg-zinc-800 hover:bg-gray-200 dark:hover:bg-zinc-700 text-sm font-medium transition-colors">
+          <i class="fa-solid fa-house-user"></i>
+          <span>Página Oficial</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="relative pt-10 pb-12 overflow-hidden">
+    <!-- Background Accents -->
+    <div class="absolute top-0 left-1/4 w-96 h-96 bg-pbi-yellow opacity-10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+    <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500 opacity-5 dark:opacity-10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto animate-fade-in-up">
+        <span class="inline-flex items-center px-3 py-1 rounded-full text-xs font-bold bg-pbi-yellow/20 text-pbi-yellow border border-pbi-yellow/30 uppercase tracking-widest mb-4">
+          <i class="fa-solid fa-file-video mr-1.5"></i> Video-Actualizaciones de Power BI
+        </span>
+        <h1 class="font-display text-4xl sm:text-5xl font-extrabold tracking-tight mb-4">
+          Novedades Mensuales de <span class="text-transparent bg-clip-text bg-gradient-to-r from-pbi-yellow to-amber-500 drop-shadow-sm">Power BI 2026</span>
+        </h1>
+        <p class="text-sm sm:text-base text-gray-600 dark:text-zinc-400 leading-relaxed mb-6">
+          Explora a fondo cada actualización oficial del canal de Microsoft Power BI de Enero a Julio de 2026. Selecciona el mes, busca términos específicos o filtra por categorías.
+        </p>
+      </div>
+
+      <!-- Quick Metrics Grid -->
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mt-6 max-w-4xl mx-auto animate-fade-in-up delay-100">
+        <div class="glassmorphism p-4 rounded-xl text-center">
+          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-months">7</div>
+          <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Meses Documentados</div>
+        </div>
+        <div class="glassmorphism p-4 rounded-xl text-center">
+          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-updates">0</div>
+          <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Funciones Detalladas</div>
+        </div>
+        <div class="glassmorphism p-4 rounded-xl text-center">
+          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-categories">6</div>
+          <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Áreas Tecnológicas</div>
+        </div>
+        <div class="glassmorphism p-4 rounded-xl text-center">
+          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-highlight">Julio 2026</div>
+          <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Última Publicación</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Interactive Dashboard -->
+  <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pb-24">
+    <!-- Toolbar -->
+    <div class="glassmorphism p-4 sm:p-5 rounded-2xl mb-8 flex flex-col gap-4 md:flex-row md:items-center justify-between animate-fade-in-up delay-200">
+      
+      <!-- Search Input -->
+      <div class="relative flex-grow max-w-md">
+        <div class="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-gray-400 dark:text-zinc-500">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <input type="text" id="search-input" placeholder="Buscar novedades (ej. 'Azure Maps', 'DAX', 'Slicers')..." class="block w-full pl-10 pr-4 py-2.5 rounded-xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-pbi-yellow/50 focus:border-pbi-yellow transition-all duration-300">
+      </div>
+
+      <!-- Filters -->
+      <div class="flex flex-wrap items-center gap-3">
+        <!-- Importance dropdown -->
+        <div class="relative">
+          <select id="importance-select" class="appearance-none pl-3.5 pr-8 py-2.5 rounded-xl bg-gray-50 dark:bg-zinc-900 border border-gray-200 dark:border-zinc-800 text-sm focus:outline-none focus:ring-2 focus:ring-pbi-yellow/50 transition-all cursor-pointer">
+            <option value="all">Importancia: Todas</option>
+            <option value="Alta">Importancia: Alta</option>
+            <option value="Media">Importancia: Media</option>
+            <option value="Baja">Importancia: Baja</option>
+          </select>
+          <div class="absolute inset-y-0 right-0 pr-3 flex items-center pointer-events-none text-gray-400">
+            <i class="fa-solid fa-chevron-down text-xs"></i>
+          </div>
+        </div>
+
+        <!-- Reset Button -->
+        <button id="toolbar-clear-btn" class="px-4 py-2.5 rounded-xl border border-gray-200 dark:border-zinc-800 text-sm font-semibold hover:bg-gray-100 dark:hover:bg-zinc-800 transition-colors flex items-center space-x-1.5">
+          <i class="fa-solid fa-rotate-left"></i>
+          <span class="hidden sm:inline">Restablecer</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Category Filter Tabs -->
+    <div class="mb-8 flex flex-wrap gap-2 animate-fade-in-up delay-300" id="category-pills">
+      <button class="category-pill active px-4 py-2 rounded-full text-xs font-semibold transition-all border border-pbi-yellow bg-pbi-yellow text-pbi-gray" data-category="all">
+        Todas las Áreas
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="Reporting">
+        <i class="fa-solid fa-chart-line mr-1.5"></i> Reporting
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="Modeling">
+        <i class="fa-solid fa-database mr-1.5"></i> Modeling
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="Service">
+        <i class="fa-solid fa-cloud mr-1.5"></i> Service & Fabric
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="AI & Copilot">
+        <i class="fa-solid fa-brain mr-1.5"></i> AI & Copilot
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="Mobile">
+        <i class="fa-solid fa-mobile-screen-button mr-1.5"></i> Mobile & Embedded
+      </button>
+      <button class="category-pill px-4 py-2 rounded-full text-xs font-semibold transition-all border border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 text-gray-600 dark:text-zinc-400 hover:border-pbi-yellow" data-category="Platform">
+        <i class="fa-solid fa-desktop mr-1.5"></i> Platform
+      </button>
+    </div>
+
+    <!-- Active Filters Feedback -->
+    <div id="filter-feedback" class="hidden items-center justify-between bg-yellow-50 dark:bg-yellow-950/20 border border-yellow-200/50 dark:border-yellow-900/30 rounded-xl p-3.5 mb-8 text-sm text-yellow-800 dark:text-yellow-300 animate-fade-in-up">
+      <div class="flex items-center space-x-2">
+        <i class="fa-solid fa-filter"></i>
+        <span id="filter-feedback-text">Se muestran X novedades.</span>
+      </div>
+      <button id="clear-filters" class="font-bold underline hover:text-yellow-600 dark:hover:text-yellow-200 transition-colors">Limpiar Filtros</button>
+    </div>
+
+    <!-- Two-Column Layout (Timeline Sidebar + Monthly Sections) -->
+    <div class="flex flex-col md:flex-row gap-8 items-start">
+      
+      <!-- Timeline Sidebar Navigation -->
+      <aside class="hidden md:flex flex-col gap-4 w-48 shrink-0 timeline-nav animate-fade-in-up delay-200">
+        <div class="p-4 glassmorphism rounded-2xl w-full">
+          <h3 class="text-xs font-extrabold tracking-wider uppercase text-gray-400 dark:text-zinc-500 mb-4 px-2">Cronología 2026</h3>
+          <ul class="space-y-4" id="timeline-menu">
+            <!-- Items inyectados dinámicamente -->
+          </ul>
+        </div>
+
+        <!-- Tarjeta de Instructor / Contacto de Clases -->
+        <div class="p-4 glassmorphism rounded-2xl w-full flex flex-col items-center text-center">
+          <div class="w-16 h-16 rounded-full overflow-hidden mb-3 border border-pbi-yellow/30 shadow-md">
+            <img src="images/david_ceron_profile.jpg" alt="Foto de perfil de David Cerón" class="w-full h-full object-cover">
+          </div>
+          <h4 class="text-xs font-extrabold text-gray-900 dark:text-white leading-tight">David Cerón</h4>
+          <p class="text-[9px] text-pbi-yellow font-bold uppercase tracking-wider mb-2">Data Analyst & Instructor</p>
+          <p class="text-[10px] text-gray-400 dark:text-zinc-500 leading-normal mb-3">Clases personalizadas de Power BI a medida de tus necesidades.</p>
+          
+          <a href="https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAAa__bh_jF5UMkQ5OUdLTDVFRVZMQ0dWWVIyN05LTVdJUy4u&amp;embed=true" target="_blank" rel="noopener noreferrer" class="w-full py-2 bg-pbi-yellow hover:bg-pbi-darkyellow text-pbi-gray rounded-xl text-[10px] font-extrabold flex items-center justify-center space-x-1 transition-all shadow-sm">
+            <i class="fa-solid fa-graduation-cap"></i>
+            <span>Solicitar Clases</span>
+          </a>
+          
+          <div class="flex items-center justify-center space-x-3.5 mt-3.5 pt-3.5 border-t border-gray-200/20 w-full text-gray-500 dark:text-zinc-400">
+            <a href="https://www.linkedin.com/in/davidceron-datanalyst" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow text-sm transition-colors" title="LinkedIn">
+              <i class="fa-brands fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/DC-DataWarehouse" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow text-sm transition-colors" title="GitHub">
+              <i class="fa-brands fa-github-alt"></i>
+            </a>
+            <a href="mailto:david.esteban.ceron@hotmail.com" class="hover:text-pbi-yellow text-sm transition-colors" title="Correo">
+              <i class="fa-solid fa-envelope"></i>
+            </a>
+          </div>
+        </div>
+      </aside>
+
+      <!-- Main Contents (Monthly Sections) -->
+      <div class="flex-grow w-full space-y-16" id="content-container">
+        <div class="py-20 text-center">
+          <i class="fa-solid fa-spinner fa-spin text-4xl text-pbi-yellow"></i>
+          <p class="mt-4 text-gray-500">Cargando secciones mensuales...</p>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-950 py-12 transition-colors">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row md:items-center justify-between gap-6">
+      <div class="flex flex-col sm:flex-row sm:items-center gap-4">
+        <div class="flex items-center space-x-3">
+          <div class="w-10 h-10 rounded-full overflow-hidden shrink-0 border border-pbi-yellow/20">
+            <img src="images/david_ceron_profile.jpg" alt="Miniatura de perfil de David Cerón" class="w-full h-full object-cover">
+          </div>
+          <div>
+            <span class="text-sm font-bold block">David Cerón | Data Analyst</span>
+            <span class="text-xs text-gray-500">Clases de Power BI: <a href="mailto:david.esteban.ceron@hotmail.com" class="hover:text-pbi-yellow font-medium underline">david.esteban.ceron@hotmail.com</a></span>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-6 text-xs text-gray-500 dark:text-zinc-400">
+        <p>© 2026. Portal fan-made curado por David Cerón.</p>
+        <div class="flex items-center space-x-4">
+          <a href="https://www.linkedin.com/in/davidceron-datanalyst" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow transition-colors font-bold text-sm" title="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+          <a href="https://github.com/DC-DataWarehouse" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow transition-colors font-bold text-sm" title="GitHub"><i class="fa-brands fa-github"></i></a>
+          <a href="mailto:david.esteban.ceron@hotmail.com" class="hover:text-pbi-yellow transition-colors font-bold text-sm" title="Correo"><i class="fa-solid fa-envelope"></i></a>
+          <span class="text-gray-300 dark:text-zinc-800">|</span>
+          <a href="https://powerbi.microsoft.com/blog/" target="_blank" rel="noopener noreferrer" class="hover:text-pbi-yellow transition-colors font-semibold">Blog Oficial</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- YouTube Video Player Modal -->
+  <div id="video-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-4xl glassmorphism rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50">
+        <h3 id="video-modal-title" class="font-display font-bold text-lg text-gray-900 dark:text-white">Reproductor de Video</h3>
+        <button id="close-modal" class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors" aria-label="Cerrar reproductor">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Responsive Video Wrapper -->
+      <div class="video-container">
+        <iframe id="video-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+
+  <!-- Custom Logic Script -->
+  <script src="app.js"></script>
+</body>
+</html>
