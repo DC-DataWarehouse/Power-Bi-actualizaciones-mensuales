@@ -96,7 +96,7 @@
           Novedades Mensuales de <span class="text-transparent bg-clip-text bg-gradient-to-r from-pbi-yellow to-amber-500 drop-shadow-sm">Power BI 2026</span>
         </h1>
         <p class="text-sm sm:text-base text-gray-600 dark:text-zinc-400 leading-relaxed mb-6">
-          Explora a fondo cada actualización oficial del canal de Microsoft Power BI de Enero a Julio de 2026. Selecciona el mes, busca términos específicos o filtra por categorías.
+          Explora a fondo cada actualización oficial del canal de Microsoft Power BI de Enero a Agosto de 2026. Selecciona el mes, busca términos específicos o filtra por categorías.
         </p>
       </div>
 
@@ -115,7 +115,7 @@
           <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Áreas Tecnológicas</div>
         </div>
         <div class="glassmorphism p-4 rounded-xl text-center">
-          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-highlight">Julio 2026</div>
+          <div class="text-pbi-yellow text-2xl font-extrabold" id="stat-highlight">Agosto 2026</div>
           <div class="text-[10px] uppercase tracking-wider text-gray-500 dark:text-zinc-500 font-bold">Última Publicación</div>
         </div>
       </div>
@@ -287,6 +287,75 @@
       <div class="video-container">
         <iframe id="video-iframe" src="" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
       </div>
+    </div>
+  </div>
+
+  <!-- Feature Detail Modal -->
+  <div id="feature-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-black/80 backdrop-blur-md transition-opacity duration-300 opacity-0" role="dialog" aria-modal="true">
+    <div class="relative w-full max-w-2xl glassmorphism rounded-2xl overflow-hidden shadow-2xl scale-95 transition-transform duration-300 flex flex-col max-h-[90vh]">
+      
+      <!-- Modal Header -->
+      <div class="flex items-center justify-between p-4 border-b border-gray-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 shrink-0">
+        <div class="flex items-center space-x-2">
+          <span id="feature-modal-month-badge" class="px-2.5 py-0.5 text-[10px] font-bold bg-pbi-yellow/20 text-pbi-yellow rounded-full border border-pbi-yellow/30 uppercase tracking-wider">
+            Agosto 2026
+          </span>
+        </div>
+        <button id="close-feature-modal" class="w-8 h-8 rounded-full flex items-center justify-center bg-gray-100 dark:bg-zinc-800 text-gray-500 dark:text-zinc-400 hover:bg-gray-200 dark:hover:bg-zinc-700 transition-colors" aria-label="Cerrar detalles">
+          <i class="fa-solid fa-xmark text-sm"></i>
+        </button>
+      </div>
+
+      <!-- Scrollable Content -->
+      <div class="p-6 overflow-y-auto space-y-6 flex-grow">
+        <!-- Feature Image (if exists) -->
+        <div id="feature-modal-image-container" class="hidden rounded-xl overflow-hidden border border-gray-200 dark:border-zinc-800 max-h-64">
+          <img id="feature-modal-image" src="" alt="Representación visual de la novedad" class="w-full h-full object-cover">
+        </div>
+        
+        <!-- Category & Importance Badges -->
+        <div class="flex flex-wrap gap-2 items-center">
+          <span id="feature-modal-category" class="inline-flex items-center px-3 py-1 rounded text-xs font-bold">
+            Categoría
+          </span>
+          <span id="feature-modal-importance" class="inline-flex items-center px-3 py-1 rounded text-xs font-bold">
+            Importancia
+          </span>
+        </div>
+
+        <!-- Title -->
+        <h2 id="feature-modal-title" class="font-display font-extrabold text-2xl sm:text-3xl text-gray-900 dark:text-white leading-tight">
+          Título de la Novedad
+        </h2>
+
+        <!-- Description -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-zinc-500">Descripción Detallada</h4>
+          <div id="feature-modal-description" class="space-y-3">
+            <!-- Contenido dinámico -->
+          </div>
+        </div>
+
+        <!-- Tags -->
+        <div class="space-y-2">
+          <h4 class="text-xs font-bold uppercase tracking-wider text-gray-400 dark:text-zinc-500">Etiquetas relacionadas</h4>
+          <div id="feature-modal-tags" class="flex flex-wrap gap-2">
+            <!-- Dynamic tags -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Footer -->
+      <div class="p-4 border-t border-gray-200 dark:border-zinc-800 bg-white/50 dark:bg-zinc-900/50 flex flex-col sm:flex-row items-center justify-between gap-3 shrink-0">
+        <span class="text-xs text-gray-400 dark:text-zinc-500">
+          Instructor: David Cerón
+        </span>
+        <button id="feature-modal-video-btn" class="w-full sm:w-auto px-4 py-2.5 bg-pbi-yellow hover:bg-pbi-darkyellow text-pbi-gray font-extrabold text-xs rounded-xl flex items-center justify-center space-x-2 shadow-md transition-all cursor-pointer">
+          <i class="fa-solid fa-circle-play"></i>
+          <span>Ver Video de este Mes</span>
+        </button>
+      </div>
+
     </div>
   </div>
 

@@ -24,6 +24,19 @@ const videoModalTitle = document.getElementById('video-modal-title');
 const videoIframe = document.getElementById('video-iframe');
 const closeModalBtn = document.getElementById('close-modal');
 
+// Modal de Detalles de Característica Elements
+const featureModal = document.getElementById('feature-modal');
+const featureModalMonthBadge = document.getElementById('feature-modal-month-badge');
+const featureModalImageContainer = document.getElementById('feature-modal-image-container');
+const featureModalImage = document.getElementById('feature-modal-image');
+const featureModalCategory = document.getElementById('feature-modal-category');
+const featureModalImportance = document.getElementById('feature-modal-importance');
+const featureModalTitle = document.getElementById('feature-modal-title');
+const featureModalDescription = document.getElementById('feature-modal-description');
+const featureModalTags = document.getElementById('feature-modal-tags');
+const featureModalVideoBtn = document.getElementById('feature-modal-video-btn');
+const closeFeatureModalBtn = document.getElementById('close-feature-modal');
+
 /**
  * Inicialización del Tema Claro/Oscuro
  */
@@ -95,6 +108,14 @@ async function loadData() {
     animateCounter('stat-months', updatesData.length);
     animateCounter('stat-updates', totalFeaturesCount);
     
+    const latestMonth = updatesData[updatesData.length - 1];
+    if (latestMonth) {
+      const highlightEl = document.getElementById('stat-highlight');
+      if (highlightEl) {
+        highlightEl.textContent = `${latestMonth.month} ${latestMonth.year}`;
+      }
+    }
+    
     // Dibujar el menú cronológico y renderizar
     buildTimelineMenu();
     render();
@@ -140,6 +161,81 @@ function closeVideoModal() {
 closeModalBtn.addEventListener('click', closeVideoModal);
 videoModal.addEventListener('click', (e) => {
   if (e.target === videoModal) closeVideoModal();
+});
+
+/**
+ * Modal de Detalles de Característica
+ */
+function openFeatureModal(feature, monthData) {
+  featureModalMonthBadge.textContent = `${monthData.month} ${monthData.year}`;
+  
+  if (feature.image) {
+    featureModalImage.src = feature.image;
+    featureModalImageContainer.classList.remove('hidden');
+  } else {
+    featureModalImage.src = '';
+    featureModalImageContainer.classList.add('hidden');
+  }
+  
+  // Categoría Badge
+  featureModalCategory.className = `inline-flex items-center px-3 py-1 rounded text-xs font-bold ${getCategoryBadgeClass(feature.category)}`;
+  featureModalCategory.innerHTML = `<i class="fa-solid ${getCategoryIcon(feature.category)} mr-1.5"></i> ${feature.category}`;
+  
+  // Importancia Badge
+  featureModalImportance.className = `inline-flex items-center px-3 py-1 rounded text-xs font-bold ${getImportanceBadgeClass(feature.importance)}`;
+  featureModalImportance.textContent = feature.importance;
+  
+  // Título e info
+  featureModalTitle.textContent = feature.title;
+  
+  // Rellenar descripción y detalles específicos en viñetas
+  let descriptionHtml = `<p class="text-sm sm:text-base text-gray-600 dark:text-zinc-300 leading-relaxed">${feature.description}</p>`;
+  if (feature.details && feature.details.length > 0) {
+    descriptionHtml += `
+      <ul class="space-y-2.5 mt-4 pl-5 list-disc text-xs sm:text-sm text-gray-500 dark:text-zinc-400 leading-relaxed">
+        ${feature.details.map(detail => `<li>${detail}</li>`).join('')}
+      </ul>
+    `;
+  }
+  featureModalDescription.innerHTML = descriptionHtml;
+  
+  // Tags
+  featureModalTags.innerHTML = '';
+  featureModalTags.innerHTML = feature.tags.map(tag => `
+    <span class="px-2.5 py-1 bg-gray-100 dark:bg-zinc-800 text-gray-600 dark:text-zinc-400 text-xs font-semibold rounded-full border border-gray-200/50 dark:border-zinc-850">
+      #${tag}
+    </span>
+  `).join('');
+  
+  // Configurar acción del botón de video
+  featureModalVideoBtn.onclick = () => {
+    closeFeatureModal();
+    setTimeout(() => {
+      openVideoModal(monthData.youtubeId, monthData.month);
+    }, 300);
+  };
+  
+  featureModal.classList.remove('hidden');
+  featureModal.classList.add('flex');
+  setTimeout(() => {
+    featureModal.classList.remove('opacity-0');
+    featureModal.querySelector('.scale-95').classList.remove('scale-95');
+  }, 10);
+}
+
+function closeFeatureModal() {
+  featureModal.classList.add('opacity-0');
+  featureModal.querySelector('.glassmorphism').classList.add('scale-95');
+  
+  setTimeout(() => {
+    featureModal.classList.add('hidden');
+    featureModal.classList.remove('flex');
+  }, 300);
+}
+
+closeFeatureModalBtn.addEventListener('click', closeFeatureModal);
+featureModal.addEventListener('click', (e) => {
+  if (e.target === featureModal) closeFeatureModal();
 });
 
 /**
@@ -316,12 +412,12 @@ function render() {
 
       <!-- Cuadrícula de Características Detalladas -->
       <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        ${month.features.map(feat => {
+        ${month.features.map((feat, featIdx) => {
           const hasImage = !!feat.image;
           const query = searchQuery.trim();
           
           return `
-            <div class="premium-card rounded-2xl">
+            <div class="premium-card rounded-2xl cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all duration-200" data-month-id="${month.id}" data-feat-idx="${featIdx}">
               ${hasImage ? `
                 <div class="img-zoom-container border-b border-gray-100 dark:border-zinc-800">
                   <img src="${feat.image}" alt="${feat.title}">
@@ -463,6 +559,20 @@ categoryPillsContainer.addEventListener('click', (e) => {
   activeCategory = button.dataset.category;
   render();
   setupScrollObserver();
+});
+
+// Delegación de eventos para clics en tarjetas de características
+contentContainer.addEventListener('click', (e) => {
+  const card = e.target.closest('.premium-card');
+  if (!card) return;
+  
+  const monthId = card.dataset.monthId;
+  const featIdx = parseInt(card.dataset.featIdx, 10);
+  
+  const monthData = updatesData.find(m => m.id === monthId);
+  if (monthData && monthData.features[featIdx]) {
+    openFeatureModal(monthData.features[featIdx], monthData);
+  }
 });
 
 // Inicializar al cargar el DOM
