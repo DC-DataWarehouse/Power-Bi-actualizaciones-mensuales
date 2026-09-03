@@ -5,75 +5,155 @@
     "year": 2026,
     "youtubeId": "xYNx4a3aRZQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=xYNx4a3aRZQ",
-    "summary": "Comenzamos el año 2026 con actualizaciones clave enfocadas en la persistencia de jerarquías en parámetros de campo, mejoras visuales en mapas de Azure y nuevas capacidades de Copilot y gobernanza.",
+    "summary": "La actualización de enero de 2026 llega con mejoras en toda la plataforma: Copilot puede asociar informes y modelos semánticos al chat como referencia, el panel de formato estrena selector de colores y restablecimientos pormenorizados, la información sobre herramientas visuales modernas alcanza disponibilidad general y Azure Maps Visual incorpora marcadores. También destacan la edición de modelos semánticos con actualización incremental en el servicio, la compatibilidad con el juego de caracteres GB18030-2022 y el formato PBIR como predeterminado.",
     "metrics": {
-      "totalFeatures": 4,
-      "highlighted": "Field Parameters & Azure Maps"
+      "totalFeatures": 9,
+      "highlighted": "Tooltips modernos (GA) y marcadores en Azure Maps"
     },
     "features": [
       {
-        "title": "Persistencia de Nivel de Jerarquía en Parámetros de Campo",
-        "description": "Una nueva propiedad para controlar si los niveles de jerarquía permanecen expandidos o se colapsan automáticamente al alternar entre diferentes parámetros de campo. Esto mejora la fluidez al navegar por dimensiones complejas.",
+        "title": "Los parámetros de campo conservan la configuración de nivel de jerarquía",
+        "description": "Nueva configuración a nivel de informe que controla si los niveles de jerarquía permanecen expandidos al alternar entre parámetros de campo. De forma predeterminada la selección persiste, pero puede desactivarse para restaurar el comportamiento anterior a julio de 2025.",
         "category": "Reporting",
         "tags": [
           "Field Parameters",
           "Jerarquía",
-          "UX"
+          "Informes"
         ],
         "importance": "Alta",
         "details": [
-          "Permite que el nivel de jerarquía seleccionado persista al alternar entre diferentes parámetros de campo.",
-          "Evita que el usuario tenga que re-expandir las jerarquías manualmente al interactuar con el reporte.",
-          "Optimiza la navegación dimensional y la experiencia de usuario (UX) en informes analíticos complejos."
+          "El nivel de jerarquía seleccionado se mantiene al cambiar entre distintos parámetros de campo.",
+          "Evita tener que volver a expandir manualmente las jerarquías al interactuar con el informe.",
+          "Se puede desactivar desde la configuración del informe para recuperar el comportamiento antiguo."
         ]
       },
       {
-        "title": "Tooltips Visuales Modernos con Acciones Rápidas",
-        "description": "Actualización de las descripciones emergentes (tooltips) modernas, agregando un pie de página de acciones que facilita realizar drill-down (profundizar) y drill-through (detallar) con un solo clic, eliminando la necesidad del clic derecho.",
+        "title": "Información sobre herramientas visuales modernas (disponible con carácter general)",
+        "description": "Las descripciones emergentes modernas alcanzan disponibilidad general e incorporan un pie de página de acciones para profundizar, retroceder o moverse entre puntos de datos directamente desde la información sobre herramientas.",
         "category": "Reporting",
         "tags": [
           "Tooltips",
           "Interactividad",
-          "Navegación"
+          "GA"
         ],
         "importance": "Alta",
         "details": [
-          "Rediseño de descripciones emergentes (tooltips) con botones de acción directa en el pie de página.",
-          "Permite realizar drill-down (profundizar) y drill-through (detallar) con un solo clic, eliminando el clic derecho.",
-          "Facilita la exploración interactiva para usuarios finales menos experimentados."
+          "Pie de página con acciones de perforación (drill down, drill up y desplazamiento) desde la propia información sobre herramientas.",
+          "Los colores del tema del informe se igualan automáticamente con opciones de personalización.",
+          "Disponible con carácter general a partir de esta versión."
         ]
       },
       {
-        "title": "Nuevas Capacidades de Marcadores en Azure Maps",
-        "description": "Se expanden las opciones de personalización espacial permitiendo el uso de imágenes e iconos personalizados como marcadores, junto con la rotación controlada por datos para optimizar la representación geográfica.",
+        "title": "Introducción de marcadores en Azure Maps Visual",
+        "description": "La nueva funcionalidad de marcadores para Azure Maps Visual permite iconos personalizados, tamaños variables y características de formato avanzadas para mejorar la claridad narrativa en el análisis geoespacial.",
         "category": "Reporting",
         "tags": [
           "Azure Maps",
-          "Geomapping",
+          "Geoespacial",
           "Diseño"
         ],
         "importance": "Media",
         "image": "images/january_azure_maps.png",
         "details": [
-          "Soporte para imágenes e iconos personalizados como marcadores espaciales en el lienzo del mapa.",
-          "Capacidad de configurar la rotación de los marcadores controlada dinámicamente por datos geográficos.",
-          "Mejora la personalización espacial para análisis de flotas, logística o distribución geográfica."
+          "Soporte de iconos personalizados como marcadores en el lienzo del mapa.",
+          "Tamaños de marcador variables y opciones de formato avanzadas.",
+          "Disponible en las semanas posteriores al lanzamiento de la versión."
         ]
       },
       {
-        "title": "Copilot y Mejoras de Gobernanza",
-        "description": "Actualizaciones en la integración de IA: la opción de configuración 'preparado para IA' cambia de nombre a 'aprobado para Copilot'. Adicionalmente, se añade soporte oficial para el estándar de caracteres GB18030-2022 de China.",
+        "title": "Mejoras en el panel de formato",
+        "description": "Selector de colores mejorado con restablecimiento a los valores predeterminados y un botón para volver de los colores personalizados a los colores del tema, además de opciones de restablecimiento pormenorizadas por grupo de formato.",
+        "category": "Reporting",
+        "tags": [
+          "Panel de Formato",
+          "Colores",
+          "UX"
+        ],
+        "importance": "Media",
+        "details": [
+          "Botón para volver de un color personalizado al color del tema.",
+          "Restablece grupos de formato individuales sin afectar al resto de la sección ni al objeto visual completo.",
+          "Control más preciso sobre el formato del informe."
+        ]
+      },
+      {
+        "title": "Actualización de tamaño de columna en tablas y matrices",
+        "description": "Las columnas se dimensionan de forma predeterminada según su contenido, lo que hace que las tablas y matrices sean más compactas y fáciles de leer. Se mantiene la opción 'Ampliar para ajustar' cuando se necesita más ancho.",
+        "category": "Reporting",
+        "tags": [
+          "Tablas y Matrices",
+          "Formato",
+          "Legibilidad"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Ancho de columna calculado automáticamente en función del contenido.",
+          "Tablas y matrices más compactas por defecto.",
+          "La opción Grow to Fit sigue disponible para expandir columnas."
+        ]
+      },
+      {
+        "title": "Cambio de nombre de 'Preparado para IA' a 'Aprobado para Copilot'",
+        "description": "La configuración para marcar un modelo de datos como preparado para inteligencia artificial pasa a llamarse 'Aprobado para Copilot' para reflejar mejor su propósito y funcionalidad.",
         "category": "AI & Copilot",
         "tags": [
           "Copilot",
           "Gobernanza",
-          "Cumplimiento"
+          "Modelos Semánticos"
         ],
         "importance": "Media",
         "details": [
-          "Cambio de nombre de la configuración del modelo de datos a 'Aprobado para Copilot' (Approved for Copilot).",
-          "Soporte oficial a nivel de plataforma para el estándar de caracteres GB18030-2022 de China.",
-          "El formato de informe PBIR (Power BI Report) se convierte en el estándar por defecto para proyectos de desarrollo (PBIP) en Azure DevOps."
+          "Solo cambia el nombre de la opción; su comportamiento se mantiene.",
+          "Ayuda a identificar qué modelos están validados para su uso con Copilot.",
+          "Configurable a nivel de modelo de datos."
+        ]
+      },
+      {
+        "title": "Adjuntar referencia al chat de Copilot en la app móvil de Power BI",
+        "description": "Permite adjuntar un informe o modelo semántico al chat de Copilot como referencia fundamentada. Para agregarlo se pulsa el icono + o se escribe / para buscar y seleccionar el elemento.",
+        "category": "AI & Copilot",
+        "tags": [
+          "Copilot",
+          "Mobile",
+          "Chat"
+        ],
+        "importance": "Media",
+        "details": [
+          "Fundamenta las respuestas de Copilot en un informe o modelo concreto.",
+          "Búsqueda rápida del elemento con el comando /.",
+          "Disponible en la aplicación móvil de Power BI."
+        ]
+      },
+      {
+        "title": "Edición de modelos semánticos con actualización incremental en el servicio",
+        "description": "Los modelos configurados con actualización incremental ahora se pueden abrir y editar en el servicio Power BI. No se pueden descargar como PBIX y el editor de Power Query no está disponible para la edición web.",
+        "category": "Modeling",
+        "tags": [
+          "Modelado Web",
+          "Actualización Incremental",
+          "Servicio"
+        ],
+        "importance": "Media",
+        "details": [
+          "Apertura y edición web de modelos con actualización incremental configurada.",
+          "Estos modelos no pueden descargarse como archivos PBIX.",
+          "El editor de Power Query no está disponible para la edición web de estos modelos."
+        ]
+      },
+      {
+        "title": "PBIR (formato de informe mejorado de Power BI) como formato predeterminado",
+        "description": "PBIR se activa de forma predeterminada en el servicio Power BI como parte de un lanzamiento por fases. La versión de marzo lo establece como predeterminado en Power BI Desktop y la disponibilidad general está prevista para el tercer trimestre de 2026.",
+        "category": "Service",
+        "tags": [
+          "PBIR",
+          "PBIP",
+          "Azure DevOps"
+        ],
+        "importance": "Media",
+        "details": [
+          "Activación por fases en el servicio (disponibilidad completa a finales de febrero).",
+          "Marzo de 2026 lo establece como valor predeterminado en Power BI Desktop.",
+          "Disponibilidad general prevista para el Q3 de 2026."
         ]
       }
     ]
@@ -84,64 +164,144 @@
     "year": 2026,
     "youtubeId": "O21vXCpYdCc",
     "youtubeUrl": "https://www.youtube.com/watch?v=O21vXCpYdCc",
-    "summary": "Febrero destaca por la disponibilidad general (GA) del segmentador de entrada de texto, optimizaciones de rendimiento y avisos críticos sobre la obsolescencia de jerarquías en tarjetas de puntuación.",
+    "summary": "Febrero de 2026 trae experiencias de inteligencia artificial más inteligentes, un límite de entrada de Copilot mucho mayor, el segmentador de entrada con disponibilidad general, objetos visuales pulidos y las nuevas funciones DAX TABLEOF y NAMEOF. También incluye avisos importantes, como el retiro de las jerarquías en los cuadros de mando de Power BI a partir del 15 de abril de 2026.",
     "metrics": {
-      "totalFeatures": 5,
-      "highlighted": "Input Slicers GA"
+      "totalFeatures": 9,
+      "highlighted": "Segmentador de entrada (GA)"
     },
     "features": [
       {
-        "title": "Segmentador de Entrada de Texto (Input Slicers) en GA",
-        "description": "El segmentador de entrada de texto alcanza disponibilidad general, sumando operadores de filtro avanzados como 'comienza con', 'no comienza con' y 'contiene todos', además de integrarse con Translytical Task Flows.",
+        "title": "Segmentador de entrada para filtrar o escribir datos (disponible con carácter general)",
+        "description": "La antigua segmentación de texto se renombra como 'segmentación de entrada' y alcanza disponibilidad general. Permite filtrar datos mediante texto libre con opciones como coincidencia exacta, 'contiene' o 'comienza con'.",
         "category": "Reporting",
         "tags": [
           "Slicers",
           "Filtros",
-          "General Availability"
+          "GA"
         ],
         "importance": "Alta",
         "image": "images/february_input_slicers.png",
         "details": [
-          "El segmentador de entrada de texto alcanza disponibilidad general (GA) con operadores de filtro avanzados.",
-          "Soporta filtros como 'comienza con', 'no comienza con' y 'contiene todos' para búsquedas de texto precisas.",
-          "Integración directa con flujos de tareas transanalíticas (Translytical Task Flows)."
+          "Cambio de nombre de 'segmentación de texto' a 'segmentación de entrada'.",
+          "Operadores flexibles: coincidencia exacta, contiene o comienza con.",
+          "Disponible con carácter general a partir de esta versión."
         ]
       },
       {
-        "title": "Actualizaciones del Elemento Visual de Tarjeta (Card Visual)",
-        "description": "Se integran nuevas capacidades para añadir y seleccionar categorías dinámicamente, facilitando la visualización resumida de métricas clave sin sobrecargar el lienzo.",
-        "category": "Reporting",
+        "title": "Límite de caracteres de entrada de Copilot ampliado",
+        "description": "El límite de caracteres para la entrada de Copilot aumenta de 500 a 10 000 caracteres en todas las superficies: independiente, panel de informes, aplicaciones, dispositivos móviles e inserción.",
+        "category": "AI & Copilot",
         "tags": [
-          "Cards",
-          "Resumen",
-          "Visualizaciones"
+          "Copilot",
+          "IA",
+          "Productividad"
         ],
         "importance": "Media",
         "details": [
-          "Nuevas capacidades para añadir y seleccionar categorías dinámicamente para KPIs en el visual de tarjeta múltiple.",
-          "Permite a los diseñadores agrupar múltiples métricas en un solo contenedor responsivo.",
-          "Optimiza el uso de espacio en el lienzo sin requerir tarjetas individuales separadas."
+          "De 500 a 10 000 caracteres por solicitud.",
+          "Aplica a todas las superficies de Copilot en Power BI.",
+          "Basado en los comentarios de los clientes."
         ]
       },
       {
-        "title": "Mejoras de Rendimiento en Azure Maps",
-        "description": "Optimizaciones de velocidad y renderizado para mapas de Azure, logrando un despliegue notablemente más rápido al emplear gráficos circulares (pie charts) sobrepuestos.",
+        "title": "Pegar selecciones en cualquier segmentador de informes",
+        "description": "El menú contextual de pegado del objeto visual de segmentación permite aplicar varias selecciones pegando directamente una lista de valores en el segmentador.",
+        "category": "Reporting",
+        "tags": [
+          "Slicers",
+          "Copiar y Pegar",
+          "Productividad"
+        ],
+        "importance": "Media",
+        "details": [
+          "Pega una lista de valores para aplicar múltiples selecciones a la vez.",
+          "Disponible desde el menú contextual del segmentador.",
+          "Útil para filtrar listas de códigos, IDs o SKU."
+        ]
+      },
+      {
+        "title": "Actualizaciones del objeto visual de tarjeta",
+        "description": "El nuevo objeto visual de tarjeta predeterminado pasa de 5 a 10 elementos destacados y, al seleccionar un nombre de categoría, filtra el resto de objetos visuales de la página.",
+        "category": "Reporting",
+        "tags": [
+          "Cards",
+          "Interactividad",
+          "KPIs"
+        ],
+        "importance": "Media",
+        "details": [
+          "El objeto visual de tarjeta predeterminado admite hasta 10 elementos destacados.",
+          "Seleccionar el nombre de una categoría filtra los demás objetos visuales de la página.",
+          "Optimiza el uso del espacio en el lienzo."
+        ]
+      },
+      {
+        "title": "Fuentes compatibles con dispositivos que no son Windows",
+        "description": "Las fuentes predeterminadas de los informes de Power BI, como Segoe UI, ahora se muestran según lo previsto cuando el informe se visualiza en un dispositivo que no es Windows (macOS o Linux).",
+        "category": "Reporting",
+        "tags": [
+          "Fuentes",
+          "Compatibilidad",
+          "Multiplataforma"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Renderizado correcto de fuentes predeterminadas en dispositivos no Windows.",
+          "Afecta a la visualización en explorador en macOS y Linux.",
+          "Sin cambios necesarios en el informe."
+        ]
+      },
+      {
+        "title": "Mejoras en el cuadro de diálogo de formato condicional",
+        "description": "El cuadro de diálogo de formato condicional se amplía con un menú desplegable más grande e información sobre herramientas que muestra los nombres de campo para facilitar la selección.",
+        "category": "Reporting",
+        "tags": [
+          "Formato Condicional",
+          "UX",
+          "Tablas y Matrices"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Menú desplegable más amplio para seleccionar campos.",
+          "Información sobre herramientas con nombres de campo.",
+          "Selección más rápida y con menos errores."
+        ]
+      },
+      {
+        "title": "Actualizaciones del objeto visual de Azure Maps",
+        "description": "Mejora del rendimiento de la visualización de Azure Maps con gráficos circulares y nuevas regiones de punto de conexión en Brasil y Corea.",
         "category": "Reporting",
         "tags": [
           "Azure Maps",
           "Rendimiento",
           "Geografía"
         ],
-        "importance": "Media",
+        "importance": "Baja",
         "details": [
-          "Optimizaciones notables de velocidad de renderizado al superponer gráficos circulares (pie charts) sobre mapas.",
-          "Carga de capas espaciales complejas de manera más fluida.",
-          "Reducción del consumo de memoria en navegadores durante la interactividad con mapas densos."
+          "Renderizado más rápido de gráficos circulares sobre el mapa.",
+          "Nuevas regiones de punto de conexión: Brasil y Corea.",
+          "Sin cambios de configuración necesarios."
         ]
       },
       {
-        "title": "Depreciación de Jerarquías en Scorecards",
-        "description": "Anuncio importante para administradores y desarrolladores: las jerarquías en las tarjetas de puntuación (scorecards) de Power BI quedan obsoletas a partir del 15 de abril de 2026.",
+        "title": "Funciones DAX TABLEOF y NAMEOF",
+        "description": "TABLEOF devuelve una referencia a la tabla asociada a una columna, medida o calendario. NAMEOF devuelve el nombre de una tabla, columna, medida o calendario como cadena de texto. Ayudan a escribir DAX más seguro y fácil de mantener.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "Fórmulas",
+          "Modelado"
+        ],
+        "importance": "Alta",
+        "details": [
+          "TABLEOF: referencia a la tabla asociada a un objeto del modelo.",
+          "NAMEOF: nombre de un objeto del modelo como texto.",
+          "Reducen los errores al renombrar objetos del modelo."
+        ]
+      },
+      {
+        "title": "Retiro de las jerarquías en los cuadros de mando de Power BI",
+        "description": "A partir del 15 de abril de 2026 se quita la característica Jerarquías de los cuadros de mando (scorecards) de Power BI. La vista Mapa térmico, vinculada a las jerarquías, también se descontinúa. Los cuadros de mando siguen funcionando con normalidad.",
         "category": "Service",
         "tags": [
           "Scorecards",
@@ -150,25 +310,9 @@
         ],
         "importance": "Media",
         "details": [
-          "Anuncio formal para administradores sobre la obsolescencia de las jerarquías en las tarjetas de puntuación (scorecards).",
-          "Fecha límite establecida para el 15 de abril de 2026 para migrar a estructuras de modelado alternativas.",
-          "Recomendación oficial de usar jerarquías estándar de modelos semánticos en su lugar."
-        ]
-      },
-      {
-        "title": "Compatibilidad de Fuentes y Selección en Slicers",
-        "description": "Mejoras en la compatibilidad de fuentes personalizadas en dispositivos que no son Windows y soporte optimizado para pegar selecciones múltiples directamente en los segmentadores de informes.",
-        "category": "Platform",
-        "tags": [
-          "Fuentes",
-          "Copiar y Pegar",
-          "Compatibilidad"
-        ],
-        "importance": "Baja",
-        "details": [
-          "Soporte mejorado de familias tipográficas personalizadas en dispositivos MacOS y Linux (no-Windows).",
-          "Habilidad para pegar directamente múltiples valores separados por comas o tabuladores en el segmentador de datos.",
-          "Ahorra tiempo al filtrar listas de códigos, IDs o SKU específicos."
+          "Fecha de retiro: 15 de abril de 2026.",
+          "La vista Mapa térmico también deja de estar disponible.",
+          "Los cuadros de mando y objetivos manuales siguen operativos."
         ]
       }
     ]
@@ -179,91 +323,155 @@
     "year": 2026,
     "youtubeId": "INwbDNhRMG0",
     "youtubeUrl": "https://www.youtube.com/watch?v=INwbDNhRMG0",
-    "summary": "En marzo se presentan cambios visuales profundos con temas predeterminados modernos, soporte TMDL en modelado web y líneas guía para etiquetas de series.",
+    "summary": "Marzo de 2026 es una versión rica en funciones: los flujos de tareas translíticos llegan a disponibilidad general, los valores predeterminados visuales modernos (versión preliminar) traen el diseño Fluent 2 a los informes y Direct Lake en OneLake alcanza disponibilidad general. También llegan los totales personalizados, las líneas de guía para etiquetas de serie, la vista TMDL en modelado web y mejoras en las funciones definidas por el usuario de DAX.",
     "metrics": {
-      "totalFeatures": 5,
-      "highlighted": "Modern Theme Defaults"
+      "totalFeatures": 9,
+      "highlighted": "Flujos de tareas translíticos (GA) y Direct Lake en OneLake (GA)"
     },
     "features": [
       {
-        "title": "Temas Predeterminados y Ajustes Visuales Modernos",
-        "description": "Rediseño completo de la apariencia predeterminada de los informes: se actualizan tipografías, márgenes, espaciado y se añaden preajustes de formato para gráficos listos para producción.",
+        "title": "Flujos de tareas translíticos (disponibles con carácter general)",
+        "description": "Los flujos de tareas translíticos permiten a los usuarios finales actuar directamente desde los informes de Power BI (actualizar registros, agregar datos o desencadenar flujos de trabajo en otros sistemas) sin salir del informe, usando las funciones de datos de usuario de Fabric.",
+        "category": "Reporting",
+        "tags": [
+          "Translytical",
+          "Escritura de Datos",
+          "GA"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Edición de registros en su lugar, anotaciones, eliminación de entradas obsoletas y llamadas a API externas como Azure OpenAI.",
+          "La escritura admite bases de datos SQL de Fabric, almacenes de Fabric y almacenes de lago (para archivos).",
+          "Se conecta a los orígenes mediante funciones de datos de usuario de Fabric."
+        ]
+      },
+      {
+        "title": "Valores predeterminados visuales modernos y personalización de tema (versión preliminar)",
+        "description": "Los objetos visuales de Power BI Desktop comienzan con un aspecto moderno alineado con Fluent 2: subtítulos, relleno uniforme, valores preestablecidos de estilo y un lienzo gris de 1080x1920 px por defecto. Los gráficos usan líneas suaves y los segmentadores el modo desplegable.",
         "category": "Reporting",
         "tags": [
           "Temas",
-          "Diseño",
-          "Estilos"
+          "Fluent 2",
+          "Versión Preliminar"
         ],
         "importance": "Alta",
         "details": [
-          "Rediseño completo de la apariencia por defecto de los informes usando la estética Fluent 2 de Microsoft.",
-          "Actualización de márgenes predeterminados, tipografías estándar y paletas de colores en gráficos nuevos.",
-          "Los informes nuevos lucen más limpios y listos para producción desde el inicio."
+          "Tema base actualizado alineado con Fluent 2.",
+          "Se activa en Opciones > Funciones de versión preliminar.",
+          "El esquema de tema admite tamaño de página y colores con nombre reutilizables."
         ]
       },
       {
-        "title": "Soporte de Vista TMDL en Modelado Web",
-        "description": "Se introduce la vista preliminar del Tabular Model Definition Language (TMDL) directamente en la interfaz de modelado web de Fabric, facilitando la edición declarativa de los metadatos del modelo.",
+        "title": "Direct Lake en OneLake (disponible con carácter general)",
+        "description": "Direct Lake en OneLake alcanza disponibilidad general. Ofrece un rendimiento elevado consultando directamente OneLake, sin necesidad de gestionar actualizaciones de datos costosas, y funciona desde Power BI Desktop con compatibilidad con la seguridad de OneLake.",
         "category": "Modeling",
         "tags": [
-          "TMDL",
-          "Modelado Web",
-          "Fabric"
+          "Direct Lake",
+          "OneLake",
+          "GA"
         ],
         "importance": "Alta",
         "details": [
-          "Vista preliminar del Tabular Model Definition Language (TMDL) directamente en el modelado web de Fabric.",
-          "Permite la edición declarativa de los metadatos del modelo en formato YAML-like legible.",
-          "Facilita la integración con herramientas de control de código de terceros y CI/CD."
+          "Power BI se estandariza en Delta Lake y Parquet como formatos de datos abiertos.",
+          "Funciona desde Power BI Desktop con seguridad de OneLake y más funciones de modelado.",
+          "Al crear el modelo se puede elegir Direct Lake en OneLake o Direct Lake en SQL."
         ]
       },
       {
-        "title": "Líneas de Guía para Etiquetas de Series (Leader Lines)",
-        "description": "Nuevas opciones de formato para gráficos de líneas que agregan líneas conductoras dinámicas entre la línea y su etiqueta de datos, incrementando drásticamente la legibilidad en gráficos densos.",
+        "title": "Totales personalizados (versión preliminar)",
+        "description": "Las tablas y matrices admiten totales personalizados para controlar lo que muestra la fila de total de una columna concreta: suma, mínimo, máximo, recuento (distinto) o recuento de las filas mostradas. Se basan en cálculos visuales.",
         "category": "Reporting",
         "tags": [
+          "Totales",
+          "Tablas y Matrices",
+          "Versión Preliminar"
+        ],
+        "importance": "Media",
+        "details": [
+          "Clic derecho en una columna numérica > 'Personalizar el cálculo total'.",
+          "Opciones: suma, mínimo, máximo, recuento, recuento distinto y recuento de filas mostradas.",
+          "Implementados sobre la base de los cálculos visuales."
+        ]
+      },
+      {
+        "title": "Líneas de guía para etiquetas de serie en gráficos de líneas",
+        "description": "Las líneas de guía (leader lines) conectan visualmente cada etiqueta de serie con su punto de datos correspondiente, lo que facilita la lectura en gráficos densos o con líneas superpuestas. Incluyen lógica de diseño para evitar colisiones de etiquetas.",
+        "category": "Reporting",
+        "tags": [
+          "Gráficos de Líneas",
           "Etiquetas de Datos",
-          "Gráficos",
           "Legibilidad"
         ],
         "importance": "Media",
         "image": "images/march_leader_lines.png",
         "details": [
-          "Nuevas líneas conductoras dinámicas en gráficos de líneas que conectan visualmente el extremo de la línea con su etiqueta.",
-          "Mejora sustancialmente la legibilidad cuando las etiquetas están amontonadas o el gráfico es denso.",
-          "Opciones de formato flexibles para color, grosor y estilo de la línea guía."
+          "Se activan automáticamente cuando las etiquetas de serie están habilitadas en informes nuevos.",
+          "Opciones de formato para estilo, ancho y transparencia de la línea.",
+          "Las etiquetas de serie se pueden seleccionar (Ctrl para varias) y resaltan la línea."
         ]
       },
       {
-        "title": "Flujos de Trabajo Transaccionales (Translytical Task Flows) en GA",
-        "description": "Disponibilidad general de los flujos de tareas transanalíticas, permitiendo integrar y trazar el recorrido del dato desde el origen en tiempo real hasta su consumo analítico final.",
+        "title": "Vista TMDL en modelado web (versión preliminar)",
+        "description": "La vista TMDL en la Web ofrece una experiencia de modelado semántico centrada en el código directamente en el navegador: crear scripts, modificar y aplicar cambios a los objetos del modelo con el lenguaje de definición de modelos tabulares sin cambiar a Power BI Desktop.",
         "category": "Modeling",
         "tags": [
-          "Flujos de Tareas",
-          "Translytical",
-          "Modelado de Datos"
+          "TMDL",
+          "Modelado Web",
+          "Versión Preliminar"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Visibilidad de nivel de código de todos los metadatos del modelo semántico.",
+          "Permite modificaciones masivas, automatización y reutilización de definiciones.",
+          "No requiere descargar archivos de modelo."
+        ]
+      },
+      {
+        "title": "Funciones definidas por el usuario de DAX (versión preliminar)",
+        "description": "La versión preliminar en curso añade la función INFO.USERDEFINEDFUNCTIONS(), seguimiento automático de dependencias al renombrar objetos, nuevas sugerencias de tipo (CalendarRef, ColumnRef, MeasureRef, TableRef) y compatibilidad con hasta 256 parámetros.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "UDF",
+          "Versión Preliminar"
         ],
         "importance": "Media",
         "details": [
-          "Disponibilidad general de los flujos de tareas que permiten trazar el recorrido del dato desde el origen en tiempo real.",
-          "Los usuarios finales pueden desencadenar acciones operativas directamente desde el reporte de Power BI.",
-          "Integración de análisis y ejecución transaccional en un solo lugar."
+          "INFO.USERDEFINEDFUNCTIONS() devuelve información sobre las UDF del modelo.",
+          "Hasta 256 parámetros por función (antes 12) y etiquetas JSDoc con prefijo ///.",
+          "El código DAX se mantiene sincronizado al renombrar tablas, columnas o medidas."
         ]
       },
       {
-        "title": "Personalización Avanzada de Totales",
-        "description": "Nuevas opciones flexibles para la personalización y formato independiente de las filas o columnas de totales dentro de matrices y tablas avanzadas.",
+        "title": "La segmentación de entrada admite formato condicional",
+        "description": "El segmentador de datos admite formato condicional (Fx) en varios componentes: colores de texto, colores de icono, bordes y barras de énfasis basados en medidas o valores de campo.",
         "category": "Reporting",
         "tags": [
-          "Totales",
-          "Tablas y Matrices",
-          "Formato"
+          "Slicers",
+          "Formato Condicional",
+          "Personalización"
         ],
         "importance": "Baja",
         "details": [
-          "Soporte para personalizar independientemente el formato, la fuente y el color de las celdas de totales en matrices.",
-          "Permite definir fórmulas DAX alternativas específicamente aplicables en las filas o columnas de totales.",
-          "Evita problemas de interpretación en totales de ratios o promedios."
+          "Aplica reglas dinámicas a filtros, operador de filtro, botón Aplicar y cuadro de entrada.",
+          "Incluye colores de fondo y borde para cada componente.",
+          "Basado en medidas o valores de campo de los datos."
+        ]
+      },
+      {
+        "title": "Actualizaciones de temas de informe",
+        "description": "Dos mejoras en los temas personalizados: se puede definir un tamaño de página predeterminado directamente en el archivo de tema y se puede hacer referencia a colores estructurales del tema, como fondo y primer plano, en el JSON del tema.",
+        "category": "Reporting",
+        "tags": [
+          "Temas",
+          "JSON",
+          "Diseño"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Tamaño de página predeterminado definido en el JSON del tema.",
+          "Las páginas nuevas heredan automáticamente esas dimensiones.",
+          "Referencia a colores estructurales (fondo, primer plano) en el tema."
         ]
       }
     ]
@@ -274,91 +482,155 @@
     "year": 2026,
     "youtubeId": "Nn19PQF59MM",
     "youtubeUrl": "https://www.youtube.com/watch?v=Nn19PQF59MM",
-    "summary": "La actualización de abril se enfoca en la predictibilidad del diseño con opciones de tamaño fijo para segmentadores, mejoras en cabeceras de categorías y traducción de metadatos DAX.",
+    "summary": "Abril de 2026 añade chat conversacional al Copilot en informe de Power BI Mobile, incorpora un conmutador de tema base al cuadro de diálogo 'Personalizar tema actual' e introduce las columnas calculadas de Direct Lake y las columnas calculadas compatibles con el contexto del usuario (versión preliminar). En informes destacan el diseño de tamaño fijo para tarjetas y segmentadores, los marcadores de autoajuste en gráficos de dispersión y las mejoras de ejes en gráficos de barras y columnas.",
     "metrics": {
-      "totalFeatures": 5,
-      "highlighted": "Fixed-size Slicers"
+      "totalFeatures": 9,
+      "highlighted": "Diseño de tamaño fijo para tarjetas y segmentadores"
     },
     "features": [
       {
-        "title": "Tamaño Fijo en Diseños para Segmentadores y Tarjetas",
-        "description": "Se introducen opciones de diseño de tamaño fijo para segmentadores de lista, segmentadores de botón y tarjetas, brindando un control de maquetación más preciso y reduciendo el salto dinámico del contenido.",
+        "title": "Diseño de tamaño fijo para tarjetas, segmentador de botones y segmentador de lista",
+        "description": "Los objetos visuales de tarjeta, segmentador de botones y segmentador de lista admiten una opción de tamaño fijo en la sección Diseño del panel Formato: se definen dimensiones exactas en píxeles y aparecen barras de desplazamiento cuando el contenido no cabe.",
         "category": "Reporting",
         "tags": [
           "Slicers",
-          "Diseño Adaptativo",
+          "Cards",
           "Maquetación"
         ],
         "importance": "Alta",
         "image": "images/april_fixed_layouts.png",
         "details": [
-          "Habilita dimensiones estáticas en píxeles para tarjetas, segmentadores de botón y de lista.",
-          "Evita el salto o recolocación del contenido visual al cambiar el tamaño de la ventana o resolución de pantalla.",
-          "Mayor predictibilidad en el diseño responsivo de dashboards."
+          "Dimensiones exactas en píxeles en lugar de un recuento de elementos.",
+          "'Autogrid' se renombra como 'Ajustar al espacio'.",
+          "En segmentadores de lista con jerarquías, mantiene el espaciado coherente al expandir y contraer."
         ]
       },
       {
-        "title": "Funciones de Usuario DAX con Parámetros Opcionales",
-        "description": "Las funciones DAX personalizadas creadas por el usuario ahora soportan parámetros opcionales. Asimismo, se incorpora soporte nativo para la traducción de metadatos del modelo.",
-        "category": "Modeling",
+        "title": "Copilot en Power BI Mobile: características ampliadas",
+        "description": "El Copilot en informe de las aplicaciones móviles admite chat conversacional fundamentado en el informe que se está viendo. Cada respuesta incluye citas a los objetos visuales de origen y en iPhone/iPad hay dictado de voz.",
+        "category": "AI & Copilot",
         "tags": [
-          "DAX",
-          "Fórmulas",
-          "Internacionalización"
+          "Copilot",
+          "Mobile",
+          "Chat"
         ],
         "importance": "Alta",
         "details": [
-          "Las funciones DAX personalizadas (User Defined Functions) ahora soportan argumentos marcados como opcionales.",
-          "Soporte nativo para la traducción de metadatos de medidas y columnas directamente en el modelo.",
-          "Facilita el desarrollo de modelos semánticos internacionales multi-idioma."
+          "Preguntas y respuestas fundamentadas en el informe, con visualizaciones generadas por IA.",
+          "Cada respuesta incluye citas a los objetos visuales de origen.",
+          "Dictado de voz disponible en iPhone y iPad."
         ]
       },
       {
-        "title": "Interactividad en Cabecera de Categorías",
-        "description": "Se perfecciona la concatenación de categorías y las interacciones de edición directa en las cabeceras de gráficos jerárquicos y tablas complejas.",
-        "category": "Reporting",
-        "tags": [
-          "Categorías",
-          "Interactividad",
-          "Jerarquías"
-        ],
-        "importance": "Media",
-        "details": [
-          "Optimización de la interactividad al concatenar categorías y jerarquías en gráficos complejos.",
-          "Mejoras de edición directa sobre cabeceras sin salir del modo de lectura.",
-          "Facilidad para alternar niveles de agrupación temporal directamente."
-        ]
-      },
-      {
-        "title": "Preajustes en el Selector de Temas",
-        "description": "Se agrega el botón 'Restablecer tema predeterminado' en el menú de temas y la capacidad de revertir rápidamente los informes al estilo visual heredado de 2018.",
+        "title": "Valores predeterminados visuales modernos: conmutador de tema base (versión preliminar)",
+        "description": "El cuadro de diálogo 'Personalizar tema actual' incluye un conmutador de tema base para revertir al tema anterior o actualizar un informe antiguo al tema base más reciente. Se añaden tamaños de página comunes y se actualizan los estilos de tabla y matriz.",
         "category": "Reporting",
         "tags": [
           "Temas",
-          "Estilos",
-          "Retrocompatibilidad"
+          "Fluent 2",
+          "Versión Preliminar"
         ],
         "importance": "Media",
         "details": [
-          "Inclusión de un botón rápido para restablecer el informe al tema base Fluent 2.",
-          "Disponibilidad de temas antiguos preestablecidos (incluyendo la paleta predeterminada de 2018) para compatibilidad retrospectiva.",
-          "Permite mantener la estética en informes heredados sin romper su maquetación."
+          "Conmutador de tema base en la cinta Ver > Personalizar tema actual.",
+          "Filas con bandas activadas por defecto y botones +/- visibles en matrices.",
+          "Tamaños de página comunes para cada relación de aspecto en Lienzo > Tamaño."
         ]
       },
       {
-        "title": "Nuevo Selector de Archivos (File Picker) Predeterminado",
-        "description": "La experiencia mejorada y moderna del selector de archivos (File Picker) de Power BI Desktop sale de su fase de vista previa y se activa como el estándar predeterminado de la aplicación.",
-        "category": "Platform",
+        "title": "Objeto visual de tarjeta: interactividad de categoría y formato",
+        "description": "Al seleccionar un encabezado de categoría se resalta la tarjeta seleccionada y se atenúan las demás. Si hay varias columnas en el campo de categoría, los valores se concatenan en el encabezado. Las imágenes en base64 se muestran correctamente.",
+        "category": "Reporting",
         "tags": [
-          "File Picker",
-          "Power BI Desktop",
-          "Gobernanza"
+          "Cards",
+          "Interactividad",
+          "Formato"
+        ],
+        "importance": "Media",
+        "details": [
+          "Resaltado de la tarjeta seleccionada al pulsar su encabezado de categoría.",
+          "Concatenación de valores cuando hay varias columnas de categoría.",
+          "Control de qué objetos visuales filtran la tarjeta con Interacciones de edición."
+        ]
+      },
+      {
+        "title": "Gráficos de dispersión: marcadores de autoajuste",
+        "description": "Los gráficos de dispersión incluyen una opción de marcadores de autoajuste que ajusta automáticamente el área de trazado para que los marcadores y burbujas cercanos a los bordes permanezcan totalmente visibles.",
+        "category": "Reporting",
+        "tags": [
+          "Gráficos de Dispersión",
+          "Ejes",
+          "Visualizaciones"
+        ],
+        "importance": "Media",
+        "details": [
+          "El área de trazado se ajusta para evitar el recorte de marcadores y burbujas.",
+          "Ya no es necesario ajustar manualmente los intervalos mínimo/máximo de los ejes.",
+          "Se activa desde el panel de formato del objeto visual."
+        ]
+      },
+      {
+        "title": "Mejoras en los ejes de gráficos de barras y columnas",
+        "description": "Una nueva opción de 'Intervalo redondeado' elimina el espaciado adicional del eje para que el eje de valores comience justo al nivel de los datos. Además, agregar etiquetas de datos ya no desplaza el intervalo de ejes.",
+        "category": "Reporting",
+        "tags": [
+          "Gráficos de Columnas",
+          "Ejes",
+          "Formato"
         ],
         "importance": "Baja",
         "details": [
-          "El nuevo selector de archivos de Power BI Desktop sale de vista previa y se activa por defecto.",
-          "Experiencia de exploración fluida para buscar reportes almacenados localmente o en la nube de OneDrive/SharePoint.",
-          "Integración directa con el inicio rápido de Fabric."
+          "Opción 'Intervalo redondeado' para ajustar el inicio del eje de valores.",
+          "Las etiquetas de datos ya no modifican el intervalo del eje.",
+          "Mayor estabilidad visual al interactuar con el gráfico."
+        ]
+      },
+      {
+        "title": "Tablas y columnas calculadas de Direct Lake (versión preliminar)",
+        "description": "Se implementan columnas calculadas (sin materializar) en las tablas de Direct Lake en OneLake, así como tablas calculadas que hacen referencia a columnas de Direct Lake en OneLake. Útil cuando otro equipo administra la preparación de datos en OneLake.",
+        "category": "Modeling",
+        "tags": [
+          "Direct Lake",
+          "Columnas Calculadas",
+          "Versión Preliminar"
+        ],
+        "importance": "Media",
+        "details": [
+          "Columnas calculadas no materializadas sobre tablas de Direct Lake en OneLake.",
+          "Tablas calculadas que hacen referencia a columnas de Direct Lake en OneLake.",
+          "Pensado para escenarios donde la preparación de datos la gestiona otro equipo."
+        ]
+      },
+      {
+        "title": "Columnas calculadas compatibles con el contexto de usuario (versión preliminar)",
+        "description": "Las columnas calculadas pueden responder dinámicamente a funciones DAX como UserCulture(), UserPrincipalName() y CustomData(), lo que habilita escenarios como las traducciones de datos. Se configura con la propiedad Expression Context.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "Internacionalización",
+          "Versión Preliminar"
+        ],
+        "importance": "Media",
+        "details": [
+          "Compatible con Direct Lake en OneLake y con tablas Import y DirectQuery.",
+          "Habilita traducciones de datos y contenido específico por usuario.",
+          "Se establece mediante la propiedad Expression Context."
+        ]
+      },
+      {
+        "title": "Funciones definidas por el usuario de DAX: mejoras de NAMEOF (versión preliminar)",
+        "description": "La función NAMEOF admite parámetros opcionales para elegir qué parte del nombre de un objeto se devuelve y cómo se da formato. La nueva firma es NAMEOF ( <object> [, <component> [, <escaped>]] ). El comportamiento existente no cambia.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "NAMEOF",
+          "Versión Preliminar"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Parámetros opcionales <component> y <escaped>.",
+          "Sin cambios de comportamiento para los modelos actuales.",
+          "Mayor control sobre el nombre devuelto y su formato."
         ]
       }
     ]
@@ -369,15 +641,15 @@
     "year": 2026,
     "youtubeId": "Fiyw2YT4w-E",
     "youtubeUrl": "https://www.youtube.com/watch?v=Fiyw2YT4w-E",
-    "summary": "Mayo llega cargado de grandes anuncios, encabezados por la disponibilidad general (GA) de los Cálculos Visuales y un rediseño completo de la interfaz para la obtención de datos.",
+    "summary": "Mayo de 2026 lleva los cálculos visuales y los totales personalizados a disponibilidad general, añade accesos directos de resumen de Copilot en la cinta del informe y el encabezado del objeto visual, y presenta una nueva experiencia de 'Obtener datos' en versión preliminar. También llegan 'Establecer como página de aterrizaje', el ancho de columna fijo y la configuración regional predeterminada para cadenas de formato, todas con disponibilidad general.",
     "metrics": {
-      "totalFeatures": 8,
-      "highlighted": "Visual Calculations GA"
+      "totalFeatures": 9,
+      "highlighted": "Cálculos visuales (GA)"
     },
     "features": [
       {
-        "title": "Cálculos Visuales (Visual Calculations) en GA",
-        "description": "Disponibilidad general de esta revolucionaria característica que permite escribir expresiones DAX directamente en el elemento visual en lugar de crear medidas a nivel de modelo. Simplifica la analítica temporal y comparativa.",
+        "title": "Cálculos visuales y totales personalizados (disponibles con carácter general)",
+        "description": "Los cálculos visuales permiten agregar sumas acumuladas, medias móviles, porcentaje del elemento principal y otros cálculos directamente en un objeto visual, sin añadir medidas DAX al modelo semántico. Los cálculos operan sobre datos agregados dentro del visual.",
         "category": "Reporting",
         "tags": [
           "Visual Calculations",
@@ -387,121 +659,137 @@
         "importance": "Alta",
         "image": "images/may_visual_calculations.png",
         "details": [
-          "Disponibilidad general (GA) de cálculos DAX escritos directamente a nivel de elemento visual en lugar del modelo.",
-          "Simplifica enormemente la creación de acumulados temporales (YTD), promedios móviles y comparaciones intermensuales.",
-          "Reduce la complejidad del modelo semántico y mejora el rendimiento general del informe."
+          "Se crean con 'Nuevo cálculo visual' desde la cinta o el menú contextual.",
+          "Los cálculos tienen en cuenta la posición de la fila dentro del visual.",
+          "Reducen la complejidad del modelo semántico."
         ]
       },
       {
-        "title": "Rediseño de la Experiencia 'Obtener Datos' (Get Data)",
-        "description": "Nueva interfaz de usuario moderna para la conectividad de datos en Power BI Desktop, optimizada para buscar, categorizar y conectar orígenes tanto locales como en la nube de Fabric de forma más eficiente.",
+        "title": "Nueva experiencia de 'Obtener datos' en Power BI Desktop (versión preliminar)",
+        "description": "Una experiencia de obtención de datos de Power Query rediseñada ofrece un lugar unificado para detectar y conectarse a orígenes: mejor detección, flujo de conexión optimizado y accesibilidad integrada (navegación por teclado y modo oscuro), coherente con Fabric, Power BI Desktop y Excel.",
         "category": "Modeling",
         "tags": [
           "Get Data",
-          "Conectores",
-          "UX"
+          "Power Query",
+          "Versión Preliminar"
         ],
         "importance": "Alta",
         "details": [
-          "Nueva interfaz de usuario moderna para la conectividad de orígenes de datos en Power BI Desktop.",
-          "Optimización en la categorización de orígenes de datos (Fabric, SQL Server, Excel, APIs, Web).",
-          "Buscador inteligente integrado para localizar conectores de manera instantánea."
+          "Detección mejorada de orígenes de datos y flujo de conexión optimizado.",
+          "Navegación por teclado y modo oscuro integrados.",
+          "Coherencia con Power Query en Fabric, Power BI Desktop y Excel."
         ]
       },
       {
-        "title": "Definición de Página de Informe como Landing Page",
-        "description": "Nueva funcionalidad para configurar una página específica del informe como página de destino por defecto al abrir el reporte en el servicio web, mejorando los flujos de bienvenida.",
-        "category": "Service",
+        "title": "Accesos directos de resumen de Copilot",
+        "description": "Un botón 'Resumir' en la cinta del informe genera un resumen de todo el informe en el panel Copilot. Una opción de resumen en el encabezado del objeto visual genera un resumen de ese visual, destacando tendencias, diferencias entre categorías y factores clave.",
+        "category": "AI & Copilot",
+        "tags": [
+          "Copilot",
+          "Resúmenes",
+          "IA"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Botón 'Resumir' en la cinta del informe para un resumen global.",
+          "Opción de resumen por objeto visual desde su encabezado.",
+          "Incluye tendencias clave, aspectos destacados y cambios."
+        ]
+      },
+      {
+        "title": "Establecer como página de aterrizaje (disponible con carácter general)",
+        "description": "Se puede designar cualquier página como página de aterrizaje para que los lectores del informe empiecen siempre en la página adecuada. Se configura con clic derecho en la pestaña de página o desde el panel de formato de página.",
+        "category": "Reporting",
         "tags": [
           "Landing Page",
-          "Power BI Service",
-          "Distribución"
+          "Navegación",
+          "GA"
         ],
         "importance": "Alta",
         "details": [
-          "Capacidad de definir una página específica como el punto de aterrizaje (landing page) predeterminado para el reporte.",
-          "Asegura que todos los usuarios accedan a una pantalla de bienvenida o menú de navegación al abrir el informe en el servicio.",
-          "Mejora los flujos de distribución corporativos."
+          "Clic derecho en una pestaña de página > 'Establecer como página de aterrizaje'.",
+          "También configurable desde el panel de formato de página.",
+          "Los lectores siempre inician el informe en esa página."
         ]
       },
       {
-        "title": "Slicers de Entrada con Soporte de Entrada Numérica",
-        "description": "Ampliación de funcionalidades para los Input Slicers, habilitando la captura de datos numéricos con validación de rangos y soporte para parámetros de tipo numérico.",
+        "title": "Totales personalizados: Ninguno y Promedio (disponible con carácter general)",
+        "description": "Los totales personalizados incorporan las opciones 'Ninguno' y 'Promedio', además de Suma, Mínimo, Máximo, Recuento y Recuento distinto. Se configuran con clic derecho en una columna numérica de la tabla o matriz.",
         "category": "Reporting",
         "tags": [
-          "Slicers",
-          "Filtros Numéricos",
-          "Validación"
-        ],
-        "importance": "Media",
-        "details": [
-          "Los Input Slicers ahora soportan captura y filtrado directo de rangos y valores numéricos.",
-          "Validación de datos numéricos en tiempo real en la interfaz de usuario.",
-          "Permite filtrar de forma exacta por límites superiores o inferiores (por ejemplo, importes de facturas)."
-        ]
-      },
-      {
-        "title": "Auto-Expansión de Matrices para Elementos Incrustados",
-        "description": "El elemento visual de matriz ahora permite la expansión automática de jerarquías de filas y columnas específicamente para escenarios donde el informe se encuentra incrustado (Embedded).",
-        "category": "Reporting",
-        "tags": [
-          "Matrices",
-          "Power BI Embedded",
-          "Automatización"
-        ],
-        "importance": "Media",
-        "details": [
-          "El elemento visual de matriz expande automáticamente los niveles jerárquicos en escenarios de Power BI Embedded.",
-          "Asegura que los usuarios finales en portales integrados vean la información desglosada sin clics extra.",
-          "Mejora la usabilidad en integraciones SaaS externas."
-        ]
-      },
-      {
-        "title": "Ancho de Columna Fijo en Tablas y Matrices",
-        "description": "Mayor flexibilidad en el formateador visual de tablas y matrices: ya es posible definir anchos de columna estáticos en píxeles, evitando el redimensionamiento dinámico automático.",
-        "category": "Reporting",
-        "tags": [
-          "Formato",
+          "Totales",
           "Tablas y Matrices",
-          "Estética"
+          "GA"
         ],
-        "importance": "Baja",
+        "importance": "Media",
         "details": [
-          "Posibilidad de definir y bloquear anchos de columnas específicos en píxeles para tablas y matrices.",
-          "Evita que el texto largo o los valores anchos cambien el ancho de las columnas dinámicamente al interactuar.",
-          "Garantiza una maquetación profesional y estable."
+          "Nuevas opciones: 'Ninguno' y 'Promedio'.",
+          "Clic derecho en columna numérica > 'Personalizar cálculo total'.",
+          "Disponibilidad general en tablas y matrices."
         ]
       },
       {
-        "title": "Configuración Regional de Formato de Cadenas por Defecto",
-        "description": "Permite definir y forzar una localización regional específica para las cadenas de formato por defecto a nivel global del informe, unificando la lectura de fechas y monedas.",
+        "title": "Configuración regional predeterminada para cadenas de formato (disponibilidad general)",
+        "description": "Permite fijar una configuración regional para las cadenas de formato del informe, de modo que todas las que admiten configuración regional la usen en lugar del idioma del explorador del lector. Solo afecta a cómo se muestran los valores; USERCULTURE() y las traducciones siguen usando la configuración del navegador.",
         "category": "Modeling",
         "tags": [
           "Localización",
           "Formato",
-          "Configuración Regional"
-        ],
-        "importance": "Baja",
-        "details": [
-          "Permite forzar una localización regional específica global a nivel del archivo del informe.",
-          "Garantiza que el formato de fechas, monedas y decimales se lee igual indeferentemente de la configuración regional del PC del usuario.",
-          "Función USERCULTURE() integrada para evaluar la configuración regional activa del usuario final."
-        ]
-      },
-      {
-        "title": "Exploración de Datos Guiada con Copilot",
-        "description": "Copilot suma nuevas habilidades que orientan y recomiendan preguntas inteligentes basadas en la semántica de los datos cargados en el informe.",
-        "category": "AI & Copilot",
-        "tags": [
-          "Copilot",
-          "IA",
-          "Exploración"
+          "GA"
         ],
         "importance": "Media",
         "details": [
-          "Copilot recomienda preguntas de negocio inteligentes basadas en la semántica del modelo de datos cargado.",
-          "Guía al usuario en la exploración del lienzo con sugerencias de KPIs clave.",
-          "Facilita el auto-servicio de análisis de datos para usuarios de negocio."
+          "Se configura en la configuración del informe.",
+          "Solo afecta a la presentación de los valores en los objetos visuales.",
+          "USERCULTURE() y las traducciones de metadatos no se ven afectadas."
+        ]
+      },
+      {
+        "title": "Segmentador de entrada con columnas numéricas (disponible con carácter general)",
+        "description": "El segmentador de entrada admite campos numéricos y una máscara de entrada numérica. Permite filtrar con expresiones como intervalos (1-2), mayor que (>2), menor que (<2), distinto de o comodines, y muestra mensajes claros ante entradas no válidas.",
+        "category": "Reporting",
+        "tags": [
+          "Slicers",
+          "Filtros Numéricos",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Sintaxis de operador: intervalos, >, <, distinto de y comodines.",
+          "Sin columna de datos, limita la segmentación a la entrada numérica para flujos translíticos.",
+          "Mensajes de validación claros ante entradas no válidas."
+        ]
+      },
+      {
+        "title": "Ancho de columna fijo y predeterminado para tabla y matriz (disponible con carácter general)",
+        "description": "Se pueden especificar anchos exactos en píxeles para las columnas de tablas y matrices, o un ancho predeterminado para todas. El ajuste automático de tamaño incorpora la opción 'Ancho fijo' y los anchos pueden diferir entre las vistas de escritorio y móvil.",
+        "category": "Reporting",
+        "tags": [
+          "Tablas y Matrices",
+          "Formato",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Anchos exactos en píxeles por columna o un ancho predeterminado global.",
+          "Nueva opción 'Ancho fijo' junto a 'ajustar al contenido' y 'ampliar para ajustar'.",
+          "Anchos independientes para las vistas de escritorio y móvil."
+        ]
+      },
+      {
+        "title": "Expansión automática de matrices para objetos visuales incrustados y Exploración (GA)",
+        "description": "Una propiedad permite que los campos agregados a una matriz se expandan automáticamente en escenarios incrustados, mostrando las jerarquías expandidas sin interacción del usuario. La función Explorar también expande automáticamente a medida que se agregan campos.",
+        "category": "Reporting",
+        "tags": [
+          "Matrices",
+          "Power BI Embedded",
+          "GA"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Jerarquías expandidas por defecto en escenarios de inserción.",
+          "Explorar expande automáticamente al añadir campos a la matriz.",
+          "Sin clics adicionales para los usuarios finales de portales integrados."
         ]
       }
     ]
@@ -512,123 +800,155 @@
     "year": 2026,
     "youtubeId": "pGmUMRa6xL4",
     "youtubeUrl": "https://www.youtube.com/watch?v=pGmUMRa6xL4",
-    "summary": "Junio revoluciona la segmentación de datos con un nuevo selector de fechas tipo calendario unificado, además de la introducción de Fabric Apps para el desarrollo de apps de datos.",
+    "summary": "Junio de 2026 incorpora las aplicaciones de Fabric para modelos semánticos y Copilot en el modelado web a la versión preliminar, lleva los mapas de formas a disponibilidad general, presenta un selector de fechas para segmentaciones (versión preliminar) e incorpora las funciones definidas por el usuario de DAX con disponibilidad general y parámetros opcionales, además de varias mejoras de creación de informes.",
     "metrics": {
-      "totalFeatures": 7,
-      "highlighted": "Date Picker & Fabric Apps"
+      "totalFeatures": 9,
+      "highlighted": "Selector de fechas para segmentaciones y Mapa de formas (GA)"
     },
     "features": [
       {
-        "title": "Nuevo Selector de Fecha de Calendario en Slicers",
-        "description": "Unificación de la experiencia de selección temporal: un nuevo visual de calendario nativo integrado en el segmentador de fechas que facilita la selección interactiva de rangos con un único clic.",
+        "title": "Selector de fecha para segmentaciones (versión preliminar)",
+        "description": "Una nueva opción de segmentación de datos con selector de fechas admite valores predeterminados relativos que se actualizan automáticamente con cada actualización y permite a los lectores del informe cambiar entre selecciones de fecha relativas y manuales.",
         "category": "Reporting",
         "tags": [
           "Slicers",
           "Date Picker",
-          "Calendario"
+          "Versión Preliminar"
         ],
         "importance": "Alta",
         "image": "images/june_date_picker.png",
         "details": [
-          "Unificación del segmentador de fechas con un componente de calendario nativo y moderno.",
-          "Selección interactiva de rangos de fechas con un solo clic.",
-          "Evita la necesidad de deslizar barras horizontales poco precisas en dispositivos móviles o web."
+          "Valores predeterminados relativos que avanzan con el tiempo en cada actualización.",
+          "Alternancia entre selección de fecha relativa y manual.",
+          "En versión preliminar a partir de esta versión."
         ]
       },
       {
-        "title": "Introducción de Fabric Apps",
-        "description": "Se lanza el concepto de Fabric Apps: una forma de empaquetar y distribuir aplicaciones de datos personalizadas sobre modelos semánticos en el inquilino de manera segura y estandarizada.",
-        "category": "Service",
-        "tags": [
-          "Fabric Apps",
-          "Distribución",
-          "Modelos Semánticos"
-        ],
-        "importance": "Alta",
-        "details": [
-          "Nueva manera de empaquetar y distribuir aplicaciones de datos completas de forma segura en la organización.",
-          "Facilita la agrupación de múltiples informes, modelos y páneles bajo un solo portal de Fabric App.",
-          "Control granular de permisos para distribución a gran escala de manera estandarizada."
-        ]
-      },
-      {
-        "title": "Mejoras de Creación de Reportes con Inteligencia Artificial",
-        "description": "Ampliación de los flujos de creación interactiva con Copilot: ahora el asistente puede sugerir diseños completos basados en descripciones breves ingresadas por el usuario.",
-        "category": "AI & Copilot",
-        "tags": [
-          "Copilot",
-          "IA",
-          "Creación Automática"
-        ],
-        "importance": "Alta",
-        "details": [
-          "Copilot puede sugerir y estructurar diseños visuales completos basados en la descripción en lenguaje natural del usuario.",
-          "Ayuda a diseñar páginas enteras del informe con una sola orden verbal o escrita.",
-          "Recomendación automática de paletas de colores alineadas a la temática."
-        ]
-      },
-      {
-        "title": "Filtrado y Ordenación en Resultados de DAX Query View",
-        "description": "Mejoras en la vista de consulta DAX: se añade la capacidad de aplicar filtros rápidos y cambiar el orden directamente sobre la cuadrícula de resultados generados.",
-        "category": "Modeling",
-        "tags": [
-          "DAX Query View",
-          "Modelado",
-          "Productividad"
-        ],
-        "importance": "Media",
-        "details": [
-          "Mejoras en la vista de consulta DAX que permiten aplicar filtros y ordenación rápida sobre la cuadrícula de resultados.",
-          "Facilita la depuración rápida de código DAX sin necesidad de copiar los datos a herramientas externas.",
-          "Mejora la productividad en el desarrollo del modelo de datos."
-        ]
-      },
-      {
-        "title": "Formato de Color para Icono de Selección en Segmentadores",
-        "description": "Se añade la capacidad de personalizar libremente el color del icono de verificación (checkbox/radio button) del segmentador de datos para alinearlo a la guía de marca corporativa.",
-        "category": "Reporting",
-        "tags": [
-          "Slicers",
-          "Personalización",
-          "Estética"
-        ],
-        "importance": "Baja",
-        "details": [
-          "Personalización completa del color del icono de verificación (checkbox) en el segmentador de datos.",
-          "Alineación visual del control con la guía de marca y paleta corporativa del informe.",
-          "Mejora estética en segmentadores interactivos de botón y lista."
-        ]
-      },
-      {
-        "title": "Efectos Hover con Imagen en el Card Visual",
-        "description": "Permite configurar imágenes en diferentes estados para el visual de tarjetas múltiples, logrando cambios de imagen interactivos al pasar el mouse por encima (hover).",
-        "category": "Reporting",
-        "tags": [
-          "Cards",
-          "Hover",
-          "Diseño"
-        ],
-        "importance": "Baja",
-        "details": [
-          "Permite configurar imágenes dinámicas alternativas en el visual de tarjetas que cambian al pasar el ratón (hover).",
-          "Crea experiencias interactivas ricas y animadas para botones KPI.",
-          "Soporte para múltiples estados visuales (normal, hover, presionado)."
-        ]
-      },
-      {
-        "title": "Actualizaciones de Mapas de Formas (Shape Map)",
-        "description": "Mejoras de rendimiento y renderizado en el mapa de formas, permitiendo la carga ágil de archivos JSON de mapas con mayor nivel de detalle geográfico.",
+        "title": "Mapa de formas (disponible con carácter general)",
+        "description": "El mapa de formas alcanza disponibilidad general y admite mapas integrados, cargas personalizadas de TopoJSON/GeoJSON, referencias de mapa basadas en URL y la descarga de los mapas personalizados cargados para su reutilización.",
         "category": "Reporting",
         "tags": [
           "Shape Map",
           "Geografía",
-          "Visualizaciones"
+          "GA"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Compatibilidad con TopoJSON y GeoJSON personalizados.",
+          "Referencias de mapa mediante URL.",
+          "Descarga de mapas personalizados cargados para reutilizarlos."
+        ]
+      },
+      {
+        "title": "Aplicaciones de Fabric para modelos semánticos (versión preliminar)",
+        "description": "Las aplicaciones de Fabric añaden un enfoque de desarrollo de aplicaciones centrado en la IA basado en modelos semánticos, de modo que los equipos crean aplicaciones operativas de datos reutilizando la gobernanza de los modelos y la lógica de negocio.",
+        "category": "AI & Copilot",
+        "tags": [
+          "Fabric Apps",
+          "Modelos Semánticos",
+          "Versión Preliminar"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Desarrollo de aplicaciones de datos centrado en la IA sobre modelos semánticos.",
+          "Reutiliza la gobernanza del modelo y la lógica de negocio.",
+          "En versión preliminar a partir de esta versión."
+        ]
+      },
+      {
+        "title": "Copilot en el modelado web (versión preliminar)",
+        "description": "Copilot en la vista de modelo ayuda a analizar la estructura del modelo y a aplicar cambios de esquema (cambios de nombre, relaciones) y a crear medidas DAX mediante instrucciones en lenguaje natural.",
+        "category": "AI & Copilot",
+        "tags": [
+          "Copilot",
+          "Modelado Web",
+          "Versión Preliminar"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Análisis de la estructura del modelo con lenguaje natural.",
+          "Cambios de esquema: cambios de nombre y relaciones.",
+          "Creación de medidas DAX asistida."
+        ]
+      },
+      {
+        "title": "Funciones definidas por el usuario de DAX (disponibles con carácter general)",
+        "description": "Las funciones definidas por el usuario de DAX alcanzan disponibilidad general, con firmas de funciones tipadas reutilizables y flujos de creación más amplios en el modelado de Power BI Desktop y web.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "UDF",
+          "GA"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Firmas de funciones tipadas y reutilizables.",
+          "Creación disponible en el modelado de escritorio y web.",
+          "Disponibilidad general a partir de esta versión."
+        ]
+      },
+      {
+        "title": "Parámetros opcionales en las funciones definidas por el usuario de DAX",
+        "description": "Las UDF de DAX admiten expresiones predeterminadas para los parámetros, de modo que los autores de llamadas pueden omitir argumentos seleccionados manteniendo la ejecución con reconocimiento de tipos.",
+        "category": "Modeling",
+        "tags": [
+          "DAX",
+          "UDF",
+          "Fórmulas"
         ],
         "importance": "Media",
         "details": [
-          "Los mapas de formas (Shape Maps) alcanzan disponibilidad general (GA).",
-          "Renderizado notablemente más rápido de archivos de mapas en formato JSON.",
-          "Soporte completo de proyecciones personalizadas sin requerir orígenes externos."
+          "Expresiones predeterminadas para parámetros de UDF.",
+          "Los argumentos opcionales se pueden omitir en la llamada.",
+          "Se conserva la ejecución con reconocimiento de tipos."
+        ]
+      },
+      {
+        "title": "Expansión automática de encabezados de fila y columna de la matriz (disponibilidad general)",
+        "description": "Los objetos visuales de matriz permiten establecer el comportamiento de expansión automática para los encabezados de fila y columna, de modo que los niveles de jerarquía recién agregados se abran expandidos de forma predeterminada.",
+        "category": "Reporting",
+        "tags": [
+          "Matrices",
+          "Jerarquías",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Comportamiento de expansión automática configurable para filas y columnas.",
+          "Los niveles de jerarquía nuevos se muestran expandidos por defecto.",
+          "Se configura en la sección de formato del objeto visual de matriz."
+        ]
+      },
+      {
+        "title": "Ordenación y filtrado de la cuadrícula de resultados de la vista de consulta DAX (GA)",
+        "description": "Las cuadrículas de resultados de la vista de consulta DAX incluyen controles de ordenación y filtro para inspeccionar la salida de una consulta sin volver a escribir su texto.",
+        "category": "Modeling",
+        "tags": [
+          "DAX Query View",
+          "Productividad",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Ordenación y filtrado directamente sobre la cuadrícula de resultados.",
+          "No es necesario reescribir la consulta para inspeccionar los datos.",
+          "Facilita la depuración de código DAX."
+        ]
+      },
+      {
+        "title": "Formato de color del icono de selección en segmentaciones (disponible con carácter general)",
+        "description": "Los segmentadores permiten configurar los colores de los iconos de selección para mejorar el contraste y la legibilidad, especialmente en temas oscuros y con imagen de marca personalizada.",
+        "category": "Reporting",
+        "tags": [
+          "Slicers",
+          "Personalización",
+          "GA"
+        ],
+        "importance": "Baja",
+        "details": [
+          "Color configurable para el icono de verificación del segmentador.",
+          "Mejora el contraste en temas oscuros.",
+          "Alineación con la guía de marca corporativa."
         ]
       }
     ]
@@ -639,32 +959,32 @@
     "year": 2026,
     "youtubeId": "8JWZF1eB6oQ",
     "youtubeUrl": "https://www.youtube.com/watch?v=8JWZF1eB6oQ",
-    "summary": "Julio se enfoca en la flexibilización de temas globales, formato condicional en líneas y cambios de política en la descarga de archivos PBIX.",
+    "summary": "Julio de 2026 amplía los valores predeterminados visuales modernos con la personalización de paletas de colores, lleva el formato condicional de gráficos de líneas y leyendas a disponibilidad general y hace generalmente disponibles las aplicaciones de la organización con públicos, junto con nuevas API CRUD. También llegan las opciones de modelo en Power BI Service y un nuevo comportamiento al descargar archivos .pbix de modelos semánticos.",
     "metrics": {
-      "totalFeatures": 7,
-      "highlighted": "Customize Current Theme UI"
+      "totalFeatures": 9,
+      "highlighted": "Formato condicional en gráficos de líneas (GA)"
     },
     "features": [
       {
-        "title": "Nueva Interfaz para Personalizar el Tema Actual",
-        "description": "Una renovación del panel de formato que permite personalizar globalmente la paleta de colores y estilos generales del informe sin necesidad de escribir archivos JSON de temas a mano.",
+        "title": "Personalizar el tema actual con los valores predeterminados visuales modernos (versión preliminar)",
+        "description": "Los valores predeterminados visuales modernos incluyen una experiencia 'Personalizar el tema actual' en el panel Formato: ajustar los valores predeterminados de todo el informe, elegir paletas de colores y controlar elementos como fondo, borde, iconos de encabezado, información sobre herramientas y sombra en todo el informe.",
         "category": "Reporting",
         "tags": [
           "Temas",
-          "Formato",
-          "Personalización"
+          "Paletas de Colores",
+          "Versión Preliminar"
         ],
         "importance": "Alta",
         "image": "images/july_customize_theme.png",
         "details": [
-          "Renovación completa del panel de temas para personalizar paletas de colores de marca interactiva.",
-          "Edición de estilos tipográficos de títulos, KPIs y valores de tablas de forma visual.",
-          "Elimina la necesidad de programar manualmente archivos JSON de temas corporativos."
+          "Ajuste global de valores predeterminados visuales y paletas de colores.",
+          "Actualización del tamaño de página, color y fondo de pantalla en todas las páginas a la vez.",
+          "Exportación del tema personalizado para reutilizarlo o añadirlo a los temas de la organización."
         ]
       },
       {
-        "title": "Formato Condicional en Gráficos de Líneas",
-        "description": "Llega a disponibilidad general la capacidad de aplicar formato condicional mediante reglas o valores de campos sobre los colores de la leyenda y las líneas de series individuales.",
+        "title": "Formato condicional para gráficos de líneas y leyendas (disponible con carácter general)",
+        "description": "El formato condicional se extiende a los gráficos de líneas y a los objetos visuales con leyendas (barras, columnas, circulares, anillos y líneas). Se puede aplicar un degradado según el valor total o la categoría, o garantizar colores uniformes mediante una única medida DAX.",
         "category": "Reporting",
         "tags": [
           "Gráficos de Líneas",
@@ -673,89 +993,121 @@
         ],
         "importance": "Alta",
         "details": [
-          "Disponibilidad general (GA) del formato condicional para las líneas individuales en gráficos de líneas.",
-          "Habilidad para pintar dinámicamente las líneas según reglas lógicas o valores de campos de base de datos.",
-          "Permite resaltar de forma automática series que no cumplen con los objetivos fijados."
+          "Aplicable a gráficos de líneas y a objetos visuales con leyenda.",
+          "Degradado basado en el valor total o en la categoría.",
+          "Colores uniformes en todo el informe mediante una medida DAX."
         ]
       },
       {
-        "title": "Modelado Semántico Avanzado en Web",
-        "description": "Se potencia el modelado de datos en el explorador: creación y edición de relaciones complejas, configuración de Time Intelligence y control directo de consultas DirectQuery en la web.",
-        "category": "Modeling",
+        "title": "Aplicaciones de la organización con públicos (disponibles de forma general)",
+        "description": "Los creadores de aplicaciones pueden ofrecer experiencias de contenido diferentes a distintos grupos de usuarios dentro de la misma aplicación, lo que facilita personalizar el contenido gestionando una sola experiencia de aplicación.",
+        "category": "Service",
         "tags": [
-          "Modelado Web",
-          "Relaciones",
-          "Time Intelligence"
+          "Aplicaciones de Organización",
+          "Audiencias",
+          "GA"
         ],
         "importance": "Alta",
         "details": [
-          "Capacidades de modelado de datos avanzadas directamente en el navegador de internet.",
-          "Creación de relaciones de muchos a muchos e inteligencia de tiempo sin requerir Power BI Desktop.",
-          "Gestión y edición directa de consultas DirectQuery en la web."
+          "Contenido distinto para distintos grupos de usuarios en una sola app.",
+          "Una única experiencia de aplicación que administrar.",
+          "Disponibilidad general a partir de esta versión."
         ]
       },
       {
-        "title": "Descarga Simplificada de Archivos PBIX",
-        "description": "Cambio en la política del servicio: las descargas de archivos .pbix generados a partir de modelos semánticos del servicio ahora descargarán exclusivamente la definición del conjunto de datos, no el reporte visual completo.",
+        "title": "Opciones de modelo ahora disponibles en Power BI Service",
+        "description": "El cuadro de diálogo 'Opciones de modelo' está disponible directamente en el modelado web, con control sobre la detección de tipos, relaciones, inteligencia de tiempo, carga paralela, configuración regional, conexiones DirectQuery y conexiones máximas por origen de datos.",
+        "category": "Modeling",
+        "tags": [
+          "Modelado Web",
+          "Opciones de Modelo",
+          "Servicio"
+        ],
+        "importance": "Alta",
+        "details": [
+          "Detección de tipos, relaciones e inteligencia de tiempo desde la web.",
+          "Configuración de carga paralela y configuración regional.",
+          "Control de conexiones DirectQuery y conexiones máximas por origen."
+        ]
+      },
+      {
+        "title": "Nuevo comportamiento al descargar .pbix de un modelo semántico",
+        "description": "Al descargar un archivo .pbix desde un modelo semántico, los usuarios obtienen un informe vacío con solo el conjunto de datos. Para descargar el informe con el conjunto de datos hay que ir al informe en el servicio Power BI.",
         "category": "Service",
         "tags": [
           "PBIX",
-          "Seguridad",
-          "Gobernanza"
+          "Gobernanza",
+          "Servicio"
         ],
         "importance": "Media",
         "details": [
-          "Cambio en la política de exportación del servicio web de Power BI.",
-          "La descarga del archivo .pbix ahora extrae únicamente los metadatos y definición del conjunto de datos (dataset).",
-          "Evita la descarga masiva y exposición accidental del reporte visual completo para mayor gobernanza."
+          "La descarga desde el modelo semántico entrega un informe vacío con el conjunto de datos.",
+          "Para obtener el informe completo hay que descargarlo desde el propio informe.",
+          "Corrige resultados incoherentes al descargar el modelo semántico."
         ]
       },
       {
-        "title": "Navegación de Pestañas de Reporte Mejorada",
-        "description": "Nueva experiencia del selector de páginas y pestañas en el portal de Power BI Service, ofreciendo menús dinámicos desplegables para saltar velozmente entre secciones.",
-        "category": "Service",
+        "title": "Mejoras de navegación de pestañas de página del informe (disponible con carácter general)",
+        "description": "Al arrastrar una pestaña de página para reordenarla, las pestañas siguen desplazándose hasta la posición deseada, y los botones de flecha para desplazarse por las pestañas son más precisos y muestran cada pestaña al desplazarse.",
+        "category": "Reporting",
         "tags": [
           "Navegación",
-          "Power BI Service",
-          "UX"
+          "Páginas de Informe",
+          "GA"
         ],
         "importance": "Media",
         "details": [
-          "Nueva barra lateral y menú desplegable responsivo para cambiar de página en el portal de Power BI Service.",
-          "Optimiza la navegación en reportes con decenas de secciones.",
-          "Mejora el tiempo de carga entre transiciones de páginas."
+          "Desplazamiento continuo al arrastrar una pestaña de página.",
+          "Botones de flecha más precisos para recorrer todas las pestañas.",
+          "Facilita mover páginas del final al principio del informe."
         ]
       },
       {
-        "title": "Públicos Objetivo en Aplicaciones Móviles (Mobile Audiences)",
-        "description": "Las audiencias creadas en las aplicaciones de organización se extienden y aplican nativamente en la aplicación móvil oficial de Power BI, logrando vistas personalizadas por rol.",
-        "category": "Mobile",
+        "title": "Descripciones de medidas con comentarios de triple barra (///)",
+        "description": "Se pueden añadir descripciones de medidas con líneas de comentario /// directamente encima de la definición MEASURE en la vista de consulta DAX. Al actualizar el modelo, la descripción se escribe en él y aparece en la información sobre herramientas, el Explorador de modelos y el panel Datos.",
+        "category": "Modeling",
         "tags": [
-          "Mobile",
-          "Seguridad",
-          "Audiencias"
+          "DAX Query View",
+          "Documentación",
+          "Medidas"
         ],
         "importance": "Media",
         "details": [
-          "Las audiencias personalizadas por roles se extienden de forma nativa a la aplicación móvil oficial.",
-          "Los usuarios móviles ven únicamente las visualizaciones y datos autorizados para su grupo o departamento.",
-          "Unificación del control de accesos multiplataforma."
+          "Sintaxis /// encima de la definición MEASURE, igual que en TMDL.",
+          "'Actualizar modelo con cambios' escribe la descripción en el modelo.",
+          "Las descripciones se muestran en la información sobre herramientas y el panel Datos."
         ]
       },
       {
-        "title": "Integración Directa de Elementos Visuales en SharePoint",
-        "description": "Nueva interfaz que permite examinar espacios de trabajo e incrustar objetos visuales individuales directamente dentro de páginas de SharePoint, sin requerir la copia manual de URLs complejas.",
-        "category": "Service",
+        "title": "El panel de configuración del modelo semántico se convierte en el valor predeterminado (versión preliminar)",
+        "description": "A partir de agosto, la configuración del modelo semántico se abre en el nuevo panel lateral en lugar de en la página de configuración completa, de modo que se pueden actualizar programaciones, credenciales y otras opciones sin salir del área de trabajo.",
+        "category": "Modeling",
         "tags": [
-          "SharePoint",
-          "Embedding",
-          "Colaboración"
+          "Modelos Semánticos",
+          "Servicio",
+          "Versión Preliminar"
         ],
         "importance": "Baja",
         "details": [
-          "Nueva interfaz para SharePoint Online que permite examinar y seleccionar elementos visuales individuales del reporte.",
-          "Incrustación simplificada sin necesidad de copiar y pegar cadenas de URL con parámetros complejos.",
-          "Autenticación unificada de SharePoint y Power BI para los lectores."
+          "El panel se abre junto al contenido, sin salir del área de trabajo.",
+          "Permite actualizar programaciones de actualización y credenciales.",
+          "Se convierte en el valor predeterminado a partir de agosto."
+        ]
+      },
+      {
+        "title": "Las audiencias de aplicaciones de la organización llegan a las aplicaciones móviles",
+        "description": "Las audiencias de aplicaciones de la organización en la aplicación móvil de Power BI ofrecen a los usuarios de iOS y Android una experiencia personalizada: al abrir una aplicación de la organización ven el contenido correspondiente a su audiencia asignada.",
+        "category": "Mobile",
+        "tags": [
+          "Mobile",
+          "Audiencias",
+          "Seguridad"
+        ],
+        "importance": "Media",
+        "details": [
+          "Experiencia de aplicación de la organización personalizada en iOS y Android.",
+          "El contenido mostrado depende de la audiencia asignada al usuario.",
+          "El contenido adecuado para cada persona también en pantallas pequeñas."
         ]
       }
     ]
@@ -766,50 +1118,48 @@
     "year": 2026,
     "youtubeId": "-GcSAYvvv94",
     "youtubeUrl": "https://www.youtube.com/watch?v=-GcSAYvvv94",
-    "summary": "La actualización de agosto destaca por la disponibilidad general (GA) de los temas y estilos modernos, controles más granulares de actualización de modelos semánticos en el servicio y la flexibilización de permisos para los usuarios de Fabric Apps.",
+    "summary": "La actualización de agosto de 2026 lleva los valores predeterminados visuales modernos y el panel Tema a disponibilidad general, añade controles granulares para la actualización de modelos semánticos en el servicio y permite usar direcciones URL de imágenes de OneLake en los objetos visuales. También incluye más opciones de formato para segmentaciones y matrices, y novedades en la aplicación móvil como girar la vista y exportar datos a Excel.",
     "metrics": {
-      "totalFeatures": 9,
-      "highlighted": "Modern Themes GA & Granular Refresh"
+      "totalFeatures": 10,
+      "highlighted": "Temas y panel de formato de temas (GA)"
     },
     "features": [
       {
-        "title": "Disponibilidad General de Temas y Estilos Modernos",
-        "description": "Los temas visuales predeterminados modernos y el panel de configuración de temas alcanzan disponibilidad general (GA), ofreciendo control exhaustivo de colores, tipografías y propiedades de página sin requerir edición manual de JSON.",
+        "title": "Valores predeterminados visuales modernos y panel de formato de temas (disponible de forma general)",
+        "description": "Los nuevos informes comienzan con el tema base Fluent 2. El panel Tema permite establecer un tema base, ajustar paletas de colores, cambiar estilos de texto, definir propiedades visuales y de página e importar o exportar temas personalizados, en Power BI Desktop o en la web.",
         "category": "Reporting",
         "tags": [
           "Temas",
-          "Diseño",
+          "Fluent 2",
           "GA"
         ],
         "importance": "Alta",
         "image": "images/august_themes_ga.jpg",
         "details": [
-          "Adopción predeterminada del tema de diseño Fluent 2 para todos los nuevos informes creados en Power BI Desktop y el servicio web.",
-          "El Panel de Temas (Theme Pane) alcanza disponibilidad general (GA), proporcionando control centralizado sobre paletas de colores, familias tipográficas y propiedades visuales de página.",
-          "Mejora en la accesibilidad de contraste y alineación de márgenes automáticos para gráficos estándar.",
-          "Eliminación de la necesidad de editar archivos de configuración JSON a mano para definir personalizaciones globales de marca corporativa."
+          "Tema base Fluent 2 por defecto en los informes nuevos.",
+          "El panel Tema alcanza disponibilidad general en escritorio y web.",
+          "Las anulaciones de fuente se eliminan del tema base, por lo que la sección Texto se aplica de forma coherente en todos los objetos visuales."
         ]
       },
       {
-        "title": "Controles Granulares de Actualización de Modelos Semánticos",
-        "description": "Nueva flexibilidad en el Servicio de Power BI que permite programar o ejecutar actualizaciones segmentadas, ya sea refrescando únicamente el esquema, los datos, o seleccionando tablas individuales.",
+        "title": "Más control sobre la actualización del modelo semántico en Power BI Service",
+        "description": "El botón 'Actualizar' ofrece tres opciones: 'Actualizar esquema y datos', 'Solo sincronizar esquema' y 'Actualizar solo datos'. Las operaciones de actualización también se pueden realizar a nivel de tabla individual.",
         "category": "Modeling",
         "tags": [
-          "Modelado",
-          "Refresco",
-          "Performance"
+          "Actualización",
+          "Modelos Semánticos",
+          "Servicio"
         ],
         "importance": "Alta",
         "details": [
-          "Posibilidad de segmentar los refrescos: se puede actualizar solo el esquema (sincronización de metadatos), solo los datos, o ambos simultáneamente.",
-          "Refresco a nivel de tabla individual: los desarrolladores pueden seleccionar qué tablas específicas actualizar, evitando procesar el modelo completo.",
-          "Optimización drástica del uso de capacidad de Microsoft Fabric y reducción del impacto de consultas concurrentes en las fuentes de origen (orígenes transaccionales).",
-          "Disponible directamente desde la interfaz del portal de Power BI Service y a través de APIs XMLA."
+          "Actualización segmentada: solo esquema, solo datos o ambos.",
+          "Actualización a nivel de tabla individual.",
+          "Reduce el impacto sobre las fuentes de origen y el uso de capacidad."
         ]
       },
       {
-        "title": "Permisos Simplificados para Consumidores de Fabric Apps",
-        "description": "A partir de esta actualización, los usuarios de Fabric Apps solo necesitan permisos de 'Lectura' (Read) en el modelo semántico subyacente para interactuar con los informes, eliminando la necesidad del permiso de 'Compilación' (Build).",
+        "title": "Permisos de modelo semántico necesarios para las aplicaciones de Fabric",
+        "description": "Para finales de agosto, los consumidores de aplicaciones de Fabric solo necesitan permiso de 'Lectura' en el modelo semántico subyacente, en lugar del permiso de 'Compilación'. Los autores de aplicaciones siguen necesitando el permiso de 'Compilación'.",
         "category": "Service",
         "tags": [
           "Fabric Apps",
@@ -818,83 +1168,14 @@
         ],
         "importance": "Alta",
         "details": [
-          "Simplificación de la gobernanza de accesos: a partir del fin de agosto, los consumidores finales de Fabric Apps solo necesitan permisos de 'Lectura' (Read) en el modelo semántico subyacente para consumir reportes.",
-          "Se elimina el requerimiento anterior de poseer permisos de 'Compilación' (Build) en el modelo semántico para interactuar con la app.",
-          "Los creadores o autores de las aplicaciones siguen requiriendo permisos de 'Compilación' para diseñar y enlazar las visualizaciones.",
-          "Garantiza mayor seguridad y control, disminuyendo el riesgo de descargas accidentales o manipulación de modelos de datos compartidos."
+          "Los consumidores finales solo requieren permiso de 'Lectura'.",
+          "Se elimina el requisito de permiso de 'Compilación' para consumir la app.",
+          "Los autores de aplicaciones siguen necesitando 'Compilación'."
         ]
       },
       {
-        "title": "Soporte de Copilot para Elementos Visuales Ocultos",
-        "description": "El generador de resúmenes de Copilot y el elemento narrativo visual ahora son capaces de interpretar y extraer información de elementos visuales que se encuentran ocultos por defecto en la página (revelados mediante marcadores de visualización).",
-        "category": "AI & Copilot",
-        "tags": [
-          "Copilot",
-          "IA",
-          "Marcadores"
-        ],
-        "importance": "Media",
-        "details": [
-          "Capacidad mejorada de IA: el Copilot Summary y el visual narrativo de Copilot ahora pueden interpretar y resumir datos de visuales ocultos por defecto.",
-          "Optimizado para escenarios donde los gráficos están ocultos tras marcadores de navegación (bookmarks de visualización) y se muestran solo tras clics del usuario.",
-          "Seguridad de datos estricta: se respetan plenamente las reglas de seguridad a nivel de fila (RLS) y de columna (OLS), impidiendo que Copilot extraiga información no autorizada.",
-          "Facilita la creación de resúmenes textuales completos que abarquen toda la interactividad del lienzo."
-        ]
-      },
-      {
-        "title": "Botón de Rotación Unificada en la App Móvil",
-        "description": "Se introduce un control interactivo de un solo toque dentro de la app móvil oficial que permite alternar la orientación de la pantalla entre vertical y horizontal (modo retrato/paisaje) de forma fluida.",
-        "category": "Mobile",
-        "tags": [
-          "Mobile",
-          "UX",
-          "Rotación"
-        ],
-        "importance": "Media",
-        "details": [
-          "Se introduce un nuevo control nativo de rotación interactiva táctil en la barra de herramientas de la app móvil oficial de Power BI.",
-          "Permite a los usuarios cambiar de orientación vertical (portrait) a horizontal (landscape) con un solo toque, sin depender del sensor de giroscopio físico del dispositivo.",
-          "Optimización automática de diseños para informes con diseño móvil configurado o visualización responsiva estándar.",
-          "Mejora la experiencia de uso en tabletas y teléfonos en entornos de movilidad."
-        ]
-      },
-      {
-        "title": "Exportación a Excel y Mejoras en SharePoint",
-        "description": "Los usuarios móviles ahora pueden exportar datos directamente a Excel desde elementos visuales individuales del reporte. Adicionalmente, se simplifica la experiencia de incrustar reportes o visuales individuales en SharePoint Online.",
-        "category": "Service",
-        "tags": [
-          "SharePoint",
-          "Excel",
-          "Colaboración"
-        ],
-        "importance": "Media",
-        "details": [
-          "Inclusión de la opción de exportación directa a archivos de Excel (.xlsx) desde elementos visuales individuales directamente en la aplicación móvil de Power BI.",
-          "Simplificación drástica del flujo para incrustar elementos en SharePoint Online mediante un selector interactivo de espacios de trabajo y reportes.",
-          "Eliminación de la copia manual de cadenas de URL complejas, reduciendo errores de configuración de iframe y autenticación en SharePoint.",
-          "Compatibilidad mejorada con directivas de acceso condicional de Microsoft 365."
-        ]
-      },
-      {
-        "title": "Mejoras de Accesibilidad en Power Query",
-        "description": "Optimizaciones de legibilidad y contraste de color en la interfaz del editor de Power Query, mejorando sensiblemente la visibilidad de los iconos de conectores en el modo oscuro.",
-        "category": "Modeling",
-        "tags": [
-          "Power Query",
-          "Accesibilidad",
-          "Dark Mode"
-        ],
-        "importance": "Baja",
-        "details": [
-          "Ajustes de alto contraste en el editor de transformaciones de Power Query (tanto en la web como en Desktop) para usuarios con deficiencias visuales.",
-          "Visibilidad optimizada de los iconos de conectores de origen al utilizar el modo oscuro (Dark Mode).",
-          "Compatibilidad extendida con lectores de pantalla para las secciones de transformaciones paso a paso (Applied Steps).",
-          "Mejora en los tiempos de renderizado de la vista de cuadrícula de previsualización al importar esquemas masivos."
-        ]
-      },
-      {
-        "title": "Integración de URLs de Imagen de OneLake en Objetos Visuales",
-        "description": "Power BI ahora admite el uso de direcciones URL de archivos directos de OneLake en informes para mostrar imágenes en tablas, matrices y segmentaciones de datos sin requerir almacenamiento externo público.",
+        "title": "Direcciones URL de archivos de OneLake para objetos visuales de informe y mapas (disponibilidad general)",
+        "description": "Las imágenes almacenadas en OneLake se pueden usar como fuente en el objeto visual de imagen, celdas de tabla y matriz, objeto visual de tarjeta, segmentadores de botón y de lista, y como iconos personalizados. Los mapas de capas de referencia y de formas también se pueden vincular desde URL de OneLake; Power BI autentica en nombre del lector.",
         "category": "Reporting",
         "tags": [
           "OneLake",
@@ -903,26 +1184,105 @@
         ],
         "importance": "Media",
         "details": [
-          "Visualización directa de imágenes almacenadas en OneLake en objetos visuales de tablas, matrices y segmentadores.",
-          "Mayor seguridad al evitar almacenar imágenes en servidores públicos externos o de terceros.",
-          "Sincronización automática de imágenes actualizadas en el lago de datos.",
-          "Optimización de rendimiento al cargar recursos binarios desde el mismo entorno SaaS de Fabric."
+          "Imágenes de OneLake en tablas, matrices, tarjetas y segmentadores.",
+          "Iconos personalizados y archivos de mapa vinculados desde OneLake.",
+          "Evita almacenar imágenes en servidores públicos externos; Power BI autentica por el lector."
         ]
       },
       {
-        "title": "Formato Avanzado de Matrices: Inmovilizar y Expandir/Contraer",
-        "description": "Mejoras en el objeto visual de matriz que permiten inmovilizar encabezados de fila y controlar dinámicamente la expansión o contracción de columnas y filas.",
-        "category": "Reporting",
+        "title": "Copilot Resumen y Copilot Narración leen objetos visuales ocultos tras marcadores",
+        "description": "Copilot Resumen y el objeto visual de narración de Copilot ahora pueden leer objetos visuales que están ocultos de forma predeterminada y se muestran mediante un marcador de informe solo para presentación. Se siguen aplicando los permisos de seguridad de nivel de fila (RLS) y de columna (OLS).",
+        "category": "AI & Copilot",
         "tags": [
-          "Matrices",
-          "Formato",
-          "Interactividad"
+          "Copilot",
+          "Marcadores",
+          "IA"
         ],
         "importance": "Media",
         "details": [
-          "Inmovilizar encabezados de fila para mantener el contexto visual al desplazarse horizontalmente por tablas anchas.",
-          "Posibilidad de expandir y contraer encabezados individuales de fila y columna directamente, mejorando la interactividad del usuario final.",
-          "Mayor consistencia visual al definir anchos de columna fijos e interactividad optimizada."
+          "Interpreta y resume datos de objetos visuales ocultos tras marcadores de presentación.",
+          "Se respetan plenamente las reglas RLS y OLS.",
+          "Resúmenes textuales que abarcan toda la interactividad del lienzo."
+        ]
+      },
+      {
+        "title": "Selector de fechas para el objeto visual de segmentación (disponible con carácter general)",
+        "description": "El selector de fechas admite selecciones relativas que avanzan con el tiempo, un calendario y un control deslizante para elegir manualmente un intervalo o una sola fecha. Una nueva opción 'Fecha única' limita la segmentación a una única fecha cada vez.",
+        "category": "Reporting",
+        "tags": [
+          "Slicers",
+          "Date Picker",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Selecciones relativas, calendario y control deslizante de intervalo.",
+          "Configuración 'Fecha única' en Visual > Configuración de segmentación de datos.",
+          "Las selecciones se pueden borrar desde un icono de encabezado."
+        ]
+      },
+      {
+        "title": "Valor central para el gráfico de anillos (disponible con carácter general)",
+        "description": "Los gráficos de anillos pueden mostrar un valor en el centro sin superponer una tarjeta. El formato del valor, las unidades, la fuente, las etiquetas, las imágenes y el fondo se configuran en el panel de formato, y el valor se actualiza con filtros, resaltado cruzado, desglose y selección de segmentos.",
+        "category": "Reporting",
+        "tags": [
+          "Gráficos de Anillos",
+          "Formato",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Valor central sin necesidad de superponer un objeto visual de tarjeta.",
+          "Formato configurable: unidades, fuente, etiquetas, imágenes y fondo.",
+          "El valor central responde a filtros, resaltado cruzado, desglose y selección."
+        ]
+      },
+      {
+        "title": "Matriz: expandir y contraer encabezados de columna e inmovilización de encabezados de fila (GA)",
+        "description": "Los encabezados de columna de la matriz admiten expandir y contraer con los iconos +/- cuando hay más de un campo en el área de columnas. Además, los autores pueden establecer el estado de inmovilización predeterminado de los encabezados de fila desde el panel de formato, y ese valor se guarda con el informe.",
+        "category": "Reporting",
+        "tags": [
+          "Matrices",
+          "Interactividad",
+          "GA"
+        ],
+        "importance": "Media",
+        "details": [
+          "Iconos +/- para expandir y contraer encabezados de columna, con color y tamaño configurables.",
+          "Estado de inmovilización predeterminado de encabezados de fila configurable en Diseño.",
+          "Las opciones de inmovilización con clic derecho siguen disponibles para cambios por sesión."
+        ]
+      },
+      {
+        "title": "Girar la vista en el pie de página del informe móvil",
+        "description": "El botón 'Girar vista' del pie de página del informe de Power BI Mobile permite cambiar entre diseños con un solo toque, incluso cuando el teléfono está bloqueado en orientación vertical. Se implementa en iOS y Android.",
+        "category": "Mobile",
+        "tags": [
+          "Mobile",
+          "UX",
+          "Rotación"
+        ],
+        "importance": "Media",
+        "details": [
+          "Cambio de orientación con un solo toque desde el pie de página del informe.",
+          "Funciona aunque el dispositivo esté bloqueado en vertical.",
+          "Disponible en iOS y Android."
+        ]
+      },
+      {
+        "title": "Exportación de datos a Excel desde la aplicación móvil de Power BI",
+        "description": "Los datos de los objetos visuales de informe se pueden exportar a Excel directamente desde la aplicación móvil de Power BI para iOS y Android, mediante el modo de enfoque o el menú 'Más opciones' del objeto visual. La exportación refleja los filtros, segmentadores, estado de desglose y la seguridad de nivel de fila.",
+        "category": "Mobile",
+        "tags": [
+          "Mobile",
+          "Excel",
+          "Exportación"
+        ],
+        "importance": "Media",
+        "details": [
+          "Exportación a Excel desde objetos visuales individuales en la app móvil.",
+          "Accesible desde el modo de enfoque o el menú 'Más opciones' (...).",
+          "Respeta filtros, segmentadores, estado de desglose y RLS."
         ]
       }
     ]
