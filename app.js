@@ -132,30 +132,36 @@ async function loadData() {
   }
 }
 
+// Elemento que tenía el foco antes de abrir un modal, para restaurarlo al cerrar
+let lastFocusedElement = null;
+
 /**
  * Modal de Video de YouTube
  */
 function openVideoModal(youtubeId, monthName) {
+  lastFocusedElement = document.activeElement;
   videoModalTitle.textContent = `Actualizaciones de Power BI - ${monthName} 2026`;
   videoIframe.src = `https://www.youtube.com/embed/${youtubeId}?autoplay=1&rel=0`;
-  
+
   videoModal.classList.remove('hidden');
   videoModal.classList.add('flex');
   setTimeout(() => {
     videoModal.classList.remove('opacity-0');
     videoModal.querySelector('.scale-95').classList.remove('scale-95');
+    closeModalBtn.focus();
   }, 10);
 }
 
 function closeVideoModal() {
   videoModal.classList.add('opacity-0');
   videoModal.querySelector('.glassmorphism').classList.add('scale-95');
-  
+
   setTimeout(() => {
     videoModal.classList.add('hidden');
     videoModal.classList.remove('flex');
-    videoIframe.src = ''; 
+    videoIframe.src = '';
   }, 300);
+  if (lastFocusedElement) lastFocusedElement.focus();
 }
 
 closeModalBtn.addEventListener('click', closeVideoModal);
@@ -167,8 +173,9 @@ videoModal.addEventListener('click', (e) => {
  * Modal de Detalles de Característica
  */
 function openFeatureModal(feature, monthData) {
+  lastFocusedElement = document.activeElement;
   featureModalMonthBadge.textContent = `${monthData.month} ${monthData.year}`;
-  
+
   if (feature.image) {
     featureModalImage.src = feature.image;
     featureModalImageContainer.classList.remove('hidden');
@@ -220,22 +227,31 @@ function openFeatureModal(feature, monthData) {
   setTimeout(() => {
     featureModal.classList.remove('opacity-0');
     featureModal.querySelector('.scale-95').classList.remove('scale-95');
+    closeFeatureModalBtn.focus();
   }, 10);
 }
 
 function closeFeatureModal() {
   featureModal.classList.add('opacity-0');
   featureModal.querySelector('.glassmorphism').classList.add('scale-95');
-  
+
   setTimeout(() => {
     featureModal.classList.add('hidden');
     featureModal.classList.remove('flex');
   }, 300);
+  if (lastFocusedElement) lastFocusedElement.focus();
 }
 
 closeFeatureModalBtn.addEventListener('click', closeFeatureModal);
 featureModal.addEventListener('click', (e) => {
   if (e.target === featureModal) closeFeatureModal();
+});
+
+// Cerrar cualquier modal abierto con la tecla Escape
+document.addEventListener('keydown', (e) => {
+  if (e.key !== 'Escape') return;
+  if (!videoModal.classList.contains('hidden')) closeVideoModal();
+  if (!featureModal.classList.contains('hidden')) closeFeatureModal();
 });
 
 /**
@@ -322,10 +338,11 @@ function render() {
 
       // Buscador
       const query = searchQuery.toLowerCase().trim();
-      const matchesSearch = !query || 
-        feature.title.toLowerCase().includes(query) || 
+      const matchesSearch = !query ||
+        feature.title.toLowerCase().includes(query) ||
         feature.description.toLowerCase().includes(query) ||
-        feature.tags.some(tag => tag.toLowerCase().includes(query));
+        feature.tags.some(tag => tag.toLowerCase().includes(query)) ||
+        (feature.details || []).some(detail => detail.toLowerCase().includes(query));
 
       return matchesCategory && matchesImportance && matchesSearch;
     });
@@ -417,7 +434,7 @@ function render() {
           const query = searchQuery.trim();
           
           return `
-            <div class="premium-card rounded-2xl cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all duration-200" data-month-id="${month.id}" data-feat-idx="${featIdx}">
+            <div class="premium-card rounded-2xl cursor-pointer hover:scale-[1.01] active:scale-[0.99] transition-all duration-200" data-month-id="${month.id}" data-feat-idx="${featIdx}" role="button" tabindex="0" aria-label="Ver detalles de la novedad: ${feat.title.replace(/"/g, '&quot;')}">
               ${hasImage ? `
                 <div class="img-zoom-container border-b border-gray-100 dark:border-zinc-800">
                   <img src="${feat.image}" alt="${feat.title}">
@@ -562,17 +579,28 @@ categoryPillsContainer.addEventListener('click', (e) => {
 });
 
 // Delegación de eventos para clics en tarjetas de características
-contentContainer.addEventListener('click', (e) => {
-  const card = e.target.closest('.premium-card');
-  if (!card) return;
-  
+function openFeatureFromCard(card) {
   const monthId = card.dataset.monthId;
   const featIdx = parseInt(card.dataset.featIdx, 10);
-  
+
   const monthData = updatesData.find(m => m.id === monthId);
   if (monthData && monthData.features[featIdx]) {
     openFeatureModal(monthData.features[featIdx], monthData);
   }
+}
+
+contentContainer.addEventListener('click', (e) => {
+  const card = e.target.closest('.premium-card');
+  if (card) openFeatureFromCard(card);
+});
+
+// Accesibilidad: abrir la tarjeta enfocada con Enter o Espacio
+contentContainer.addEventListener('keydown', (e) => {
+  if (e.key !== 'Enter' && e.key !== ' ' && e.key !== 'Spacebar') return;
+  const card = e.target.closest('.premium-card');
+  if (!card) return;
+  e.preventDefault();
+  openFeatureFromCard(card);
 });
 
 // Inicializar al cargar el DOM

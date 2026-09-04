@@ -102,23 +102,12 @@ Migración:
    `tailwind.config`, y enlazar `dist/styles.css`.
 6. Integrar el build en la Action del punto 1 (y/o `npm run build` local antes de push).
 
-### 3. Correcciones menores detectadas (2026-09-03)
+### 3. Correcciones menores — HECHO (2026-09-03)
 
-- **Pill "Platform" vacía:** tras revisar `data.json` con las fuentes oficiales, ninguna
-  novedad quedó en la categoría `Platform`. Reclasificar ahí los avisos generales
-  (retiro del selector de archivos, controladores ODBC, PBIR como predeterminado…) o
-  quitar la pill de `index.html`.
-- **Métricas del hero con valores fijos:** `index.html` tiene `stat-months` = `7` y
-  `stat-updates` = `0` como fallback (líneas ~106-110); actualizar a 8 o dejar que solo
-  lo controle `app.js`.
-- **Accesibilidad:** las `.premium-card` son `<div>` con `onclick` (no accesibles por
-  teclado → añadir `role="button"`, `tabindex="0"`, Enter/Espacio); los modales no
-  cierran con `Escape` ni atrapan el foco; el `<iframe>` de YouTube no tiene `title`.
-- **SEO:** falta `favicon` y etiquetas Open Graph / Twitter Card.
-- **Buscador:** no incluye el contenido de `details[]` (donde está la mayor parte del
-  texto). Añadirlo a `matchesSearch` en `app.js`.
-- **Contenido del footer:** revisar textos "David Cerón | Data Analyst" y "Clases de
-  Power BI" en `index.html` (líneas ~249-250) para alinearlos con el rol actual.
+Resueltas en esta sesión: pill "Platform" retirada (ninguna novedad usa esa categoría),
+métricas del hero corregidas, accesibilidad de tarjetas y modales (teclado, `Escape`,
+foco, `title` del iframe), `favicon` + Open Graph / Twitter Card, el buscador ahora
+también mira `details[]`, y textos del footer alineados con el rol actual.
 
 ---
 
